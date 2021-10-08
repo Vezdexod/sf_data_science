@@ -1,31 +1,30 @@
 """Игра угадай число
 Компьютер сам загадывает и сам угадывает число
 """
-
 import numpy as np
 
-predict_number_ls = []
+predict_number_ls = [] # Создание списка с рандомными значениями каждой из 1000 итерациЙ
 
 def random_predict(number: int = 50) -> int:
-    """Рандомно задаем число и угадываем его
+    """Рандомно задаем число и угадываем его по заданному алгоритму
 
     Args:
-        number (int, optional): Загаданное число. Defaults to 1.
+        number (int, optional): Загаданное число. Defaults to 50.
 
     Returns:
         int: Число попыток
     """
-    count = 0    
-    global predict_number_ls
+    count = 0                   # Обнуляем число попыток
+    global predict_number_ls    # Объявляем глобальный список
     
-    predict_number = np.random.randint(1, 101)  # предполагаемое число
+    predict_number = np.random.randint(1, 101)  # Генерируем "загаданное" число
     predict_number_ls.append(predict_number)
-    #Основа задания
+    # Основа задания
     while True:
         count += 1
         if number == predict_number:
-            break  # выход из цикла если угадали
-        elif number < predict_number:   #50...100
+            break  # Выход из цикла если угадали
+        elif number < predict_number:   # От 50 до 100
             if predict_number == 75:
                 break
             elif predict_number < 75:
@@ -34,7 +33,7 @@ def random_predict(number: int = 50) -> int:
                 number = 76
             else:
                 number += 1                
-        else:                           #0...50
+        else:                           # От 0 до 50
             if predict_number == 25:
                 break
             elif predict_number > 25:
