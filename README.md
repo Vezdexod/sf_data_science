@@ -1,2 +1,12 @@
-# sf_data_science
-SF Homework
+# Data Science progekt by Vezdexod
+
+From the [SkillFactory Data Science courses] (https://skillfactory.ru/data-scientist).
+
+## Проекты
+
+* [Проект 0. Игра: Угадай число](https://github.com/Vezdexod/sf_data_science/progect_0)
+* [Проект 1. _____________](_________)
+* [Проект 2. _____________](_________)
+
+
+## Ссылки на резюме
