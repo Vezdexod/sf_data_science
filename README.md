@@ -1,4 +1,4 @@
-# Data Science progekt by Vezdexod
+# Data Science projects by Vezdexod
 
 From the [SkillFactory Data Science courses] (https://skillfactory.ru/data-scientist).
 
