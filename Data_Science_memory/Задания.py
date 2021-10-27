@@ -1766,9 +1766,66 @@ array([[[26, 91, 73,  7, 16],
 
 
 
-////////////
-///6.2.7///
-//////////
+/////////////
+///11.2.3///
+///////////
+import pandas as pd
+
+def delete_columns(df, col=[]):
+    """
+    Напишите функцию delete_columns(df, col=[]), которая удаляет столбцы из DataFrame и возвращает новую таблицу. 
+    Если одного из указанных столбцов в таблице не существует, то функция должна возвращать None.
+    """
+    for i in col:
+        if i not in df.columns:
+            return None
+    return df.drop(col, axis=1)
+    
+
+
+if __name__ == '__main__':
+    customer_df = pd.DataFrame({
+        'number': [0, 1, 2, 3, 4],
+        'cust_id': [128, 1201, 9832, 4392, 7472],
+        'cust_age': [13, 21, 19, 21, 60],
+        'cust_sale': [0, 0, 0.2, 0.15, 0.3],
+        'cust_year_birth': [2008, 2000, 2002, 2000, 1961],
+        'cust_order': [1400, 14142, 900, 1240, 8430]
+    })
+    columns_for_delete= ['number','cust_age'] #выбранные вами столбцы
+    new_df = delete_columns(customer_df, columns_for_delete)
+    print(new_df)
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+/////////////
+///11.4.2///
+///////////
+import pandas as pd
+
+melb_data = pd.read_csv('C:\Python\melb_data_ps.csv', sep=',')
+
+melb_df = melb_data.copy()
+
+melb_df['Date'] = pd.to_datetime(melb_df['Date'])
+melb_df['WeekdaySale'] = melb_df['Date'].dt.dayofweek
+
+weekend_count = melb_df[(melb_df['WeekdaySale'] == 5) | (melb_df['WeekdaySale'] == 6)].shape[0]
+print(weekend_count)
+
+def get_weekend(weekday):
+    if weekday == 5 or weekday == 6:
+        return 1
+    else: 
+        return 0
+melb_df['Weekend'] = melb_df['WeekdaySale'].apply(get_weekend)
+print(round(melb_df[melb_df['Weekend']==1]['Price'].mean(), 2))
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1779,10 +1836,34 @@ array([[[26, 91, 73,  7, 16],
 
 
 
-////////////
-///6.2.7///
-//////////
+/////////////
+///11.4.3///
+///////////
+import pandas as pd
 
+melb_data = pd.read_csv('C:\Python\melb_data_ps.csv', sep=',')
+
+melb_df = melb_data.copy()
+
+melb_df['Date'] = pd.to_datetime(melb_df['Date'])
+melb_df['WeekdaySale'] = melb_df['Date'].dt.dayofweek
+weekend_count = melb_df[(melb_df['WeekdaySale'] == 5) | (melb_df['WeekdaySale'] == 6)].shape[0]
+
+#print(melb_df['SellerG'])
+SellerG = melb_df['SellerG']
+    #nlargest(n) - возвращяет n самых популярных элементов
+#print(SellerG.nunique())
+
+popular_SellerG =SellerG.value_counts().nlargest(49).index
+#print(popular_SellerG)
+
+melb_df['popular_SellerG'] = SellerG.apply(lambda x: x if x in popular_SellerG else 'other')
+print(melb_df['popular_SellerG'].nunique())
+
+
+a = melb_df[melb_df['popular_SellerG'] == 'Nelson']['Price'].min() 
+b = melb_df[melb_df['popular_SellerG'] == 'other']['Price'].min()
+print(round(a/b, 1))
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -1792,23 +1873,38 @@ array([[[26, 91, 73,  7, 16],
 
 
 
-////////////
-///6.2.7///
-//////////
+/////////////
+///11.4.4///
+///////////
+import pandas as pd
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+def get_experience(arg):
+    """
+    Напишите функцию get_experience(arg), аргументом которой является строка столбца с опытом работы. 
+    Функция должна возвращать опыт работы в месяцах. Не забудьте привести результат к целому числу.
+    """
+    year_list = ['лет','года','год']
+    month_list = ['месяца','месяцев','месяц']
+    arg_list = arg.split(' ')
+    month,year = 0, 0
+    for i in range(len(arg_list)):
+        if arg_list[i] in month_list:
+            month = arg_list[i-1]
+        if arg_list[i] in year_list:
+            year = arg_list[i-1]
+    return int(year)*12+int(month)
 
 
-
-
-
-
-
-
-////////////
-///6.2.7///
-//////////
-
+if __name__ == '__main__':
+    experience_col = pd.Series([
+        'Опыт работы 8 лет 3 месяца',
+        'Опыт работы 3 года 5 месяцев',
+        'Опыт работы 1 год 9 месяцев',
+        'Опыт работы 3 месяца',
+        'Опыт работы 6 лет'
+        ])
+    experience_month = experience_col.apply(get_experience)
+    print(experience_month)
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
