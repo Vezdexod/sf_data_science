@@ -2370,6 +2370,7 @@ years_sold = melb_df['Date'].dt.year
     year, month, day — год, месяц, день;
     days — период в днях (350 дней, например);
     time — время;
+    seconds - время в секундах; #Только для разницы врмени (deltaTime)
     hour, minute, second — час, минута, секунда;
     dayofweek — номер дня недели, от 0 до 6, где 0 — понедельник, 6 — воскресенье;
     weekday_name — название дня недели;
@@ -2420,6 +2421,39 @@ unique_counts = pd.DataFrame(
 # выводим её на экран
 display(unique_counts)
 
+//Преобразование столбцов к типу данных category .astype('category')
+cols_to_exclude = ['Date', 'Rooms', 'Bedroom', 'Bathroom', 'Car'] # список столбцов, которые мы не берём во внимание
+max_unique_count = 150 # задаём максимальное число уникальных категорий
+for col in melb_df.columns: # цикл по именам столбцов
+    if melb_df[col].nunique() < max_unique_count and col not in cols_to_exclude: # проверяем условие
+        melb_df[col] = melb_df[col].astype('category') # преобразуем тип столбца
+display(melb_df.info())
+Разберём код подробнее:
+1 Задаём список столбцов, которые мы не берём в рассмотрение (cols_to_exclude), а также условленный 
+нами ранее порог уникальных значений столбца max_unique_count.
+2 В цикле перебираем имена столбцов, и, если число уникальных категорий меньше 
+заданного порога и имён столбцов нет в списке cols_to_exclude, то с помощью метода astype() 
+приводим столбец к типу данных category.
+3 Итоговый объём памяти — 1.9 Мб. В результате такого преобразования объём памяти, 
+занимаемый таблицей, уменьшился почти в 1.5 раза. Это впечатляет!
+
+//Атрибуты category .cat.atribyt()
+#Получение списка уникальных категорий
+print(melb_df['Regionname'].cat.categories)
+
+#Посмотрим, каким образом столбец кодируется в виде чисел в памяти компьютера
+print(melb_df['Regionname'].cat.codes)
+
+#Переименование категорий с помощью словаря
+melb_df['Type'] = melb_df['Type'].cat.rename_categories({
+    'старое название':'новое название',
+    'u': 'unit',
+    't': 'townhouse',
+    'h': 'house'
+})
+
+#Добавить категорию
+melb_df['Type'] = melb_df['Type'].cat.add_categories('flat')
 
 
 

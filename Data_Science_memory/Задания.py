@@ -1915,10 +1915,28 @@ if __name__ == '__main__':
 
 
 ////////////
-///6.2.7///
+///11.5.2///
 //////////
+import pandas as pd
 
+melb_data = pd.read_csv('C:\Python\melb_data_ps.csv', sep=',')
 
+melb_df = melb_data.copy()
+
+#print(melb_df.info())
+#2.4 Mb
+#print(melb_df['Suburb'].nlargest(119).index)
+
+Suburb = melb_df['Suburb']
+#print(Suburb)
+popular_Suburb =Suburb.value_counts().nlargest(119).index
+#print(popular_Suburb)
+melb_df['Suburb'] = Suburb.apply(lambda x: x if x in popular_Suburb else 'other')
+print(melb_df['Suburb'].nunique())
+
+melb_df['Suburb'] = melb_df['Suburb'].astype('category')
+print(melb_df.info())
+#2.3 Mb
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -1928,10 +1946,23 @@ if __name__ == '__main__':
 
 
 
-////////////
-///6.2.7///
-//////////
+/////////////
+///11.6.9///
+///////////
+import pandas as pd
 
+citybike_data = pd.read_csv('C:\Python\citibike-tripdata.csv', sep=',')
+
+citybike_df = citybike_data.copy()
+
+#print(citybike_df.info())
+#print(citybike_df['end station name'].mode())
+#print(citybike_df['start station id'].value_counts())
+#print(citybike_df['start station name'].value_counts())
+citybike_df['age'] = 2018-citybike_df['birth year']
+citybike_df = citybike_df.drop(['birth year'], axis=1)
+#print(citybike_df['age'].max())
+print(citybike_df[citybike_df['age']>60]['age'].shape)
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -1941,10 +1972,22 @@ if __name__ == '__main__':
 
 
 
-////////////
-///6.2.7///
-//////////
+/////////////
+///11.6.10///
+///////////
+import pandas as pd
 
+citybike_data = pd.read_csv('C:\Python\citibike-tripdata.csv', sep=',')
+
+citybike_df = citybike_data.copy()
+
+#print(citybike_df.head())
+#print(citybike_df.info())
+
+citybike_df['starttime'] = pd.to_datetime(citybike_df['starttime'])
+citybike_df['stoptime'] = pd.to_datetime(citybike_df['stoptime'])
+citybike_df['trip duration'] = (citybike_df['stoptime'] - citybike_df['starttime']).dt.seconds
+print(citybike_df['trip duration'].mean())
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -1954,10 +1997,22 @@ if __name__ == '__main__':
 
 
 
+//////////////
+///11.6.11///
 ////////////
-///6.2.7///
-//////////
+import pandas as pd
 
+citybike_data = pd.read_csv('C:\Python\citibike-tripdata.csv', sep=',')
+
+citybike_df = citybike_data.copy()
+
+#print(citybike_df.head())
+#print(citybike_df.info())
+
+citybike_df['starttime'] = pd.to_datetime(citybike_df['starttime'])
+weekday = citybike_df['starttime'].dt.dayofweek
+citybike_df['weekend'] = weekday.apply(lambda x: 1 if x ==5 or x == 6 else 0)
+print(citybike_df['weekend'].sum())
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -1967,10 +2022,33 @@ if __name__ == '__main__':
 
 
 
+//////////////
+///11.6.12///
 ////////////
-///6.2.7///
-//////////
+import pandas as pd
 
+def time_of_day(times):
+    if 0<=times<=6:
+        return 'night'
+    elif 6<times<=12:
+        return 'morning'
+    elif 12<times<=18:
+        return 'day'
+    else:
+        return 'evening' 
+
+citybike_data = pd.read_csv('C:\Python\citibike-tripdata.csv', sep=',')
+
+citybike_df = citybike_data.copy()
+
+#print(citybike_df.head())
+#print(citybike_df.info())
+
+citybike_df['starttime'] = pd.to_datetime(citybike_df['starttime'])
+
+time_day = citybike_df['starttime'].dt.hour
+citybike_df['time_of_day'] = time_day.apply(time_of_day)
+print(citybike_df['time_of_day'].value_counts())
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
