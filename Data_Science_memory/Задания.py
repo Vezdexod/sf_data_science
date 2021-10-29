@@ -2059,9 +2059,33 @@ print(citybike_df['time_of_day'].value_counts())
 
 
 ////////////
-///6.2.7///
+///12.2.2///
 //////////
+import pandas as pd
 
+
+melb_data = pd.read_csv('C:\Python\melb_data_fe.csv', sep=',')
+
+melb_df = melb_data.copy()
+
+#print(melb_df.head())
+#print(melb_df.info())
+
+melb_df['Date'] = pd.to_datetime(melb_df['Date'])
+#print(melb_df.info())
+
+cols_to_exclude = ['Date', 'Rooms', 'Bedroom', 'Bathroom', 'Car'] # список столбцов, которые мы не берём во внимание
+max_unique_count = 150 # задаём максимальное число уникальных категорий
+for col in melb_df.columns: # цикл по именам столбцов
+    if melb_df[col].nunique() < max_unique_count and col not in cols_to_exclude: # проверяем условие
+        melb_df[col] = melb_df[col].astype('category') # преобразуем тип столбца
+#print(melb_df.info())
+
+print(melb_df.sort_values(
+    by='AreaRatio', 
+    ascending = False, 
+    ignore_index = True
+    ).loc[1558, 'BuildingArea'])
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -2072,9 +2096,32 @@ print(citybike_df['time_of_day'].value_counts())
 
 
 ////////////
-///6.2.7///
+///12.2.3///
 //////////
+import pandas as pd
 
+
+melb_data = pd.read_csv('C:\Python\melb_data_fe.csv', sep=',')
+
+melb_df = melb_data.copy()
+
+#print(melb_df.head())
+#print(melb_df.info())
+
+mask1 = melb_df['Rooms'] > 2
+mask2 = melb_df['Type'] == 'townhouse'
+
+#print(melb_df.iloc[2])
+print(
+(melb_df[mask1 & mask2].sort_values(
+    by=['Rooms', 'MeanRoomsSquare'],
+    ascending=[True, False],
+    ignore_index=True,
+    
+)['Price'].iloc[18])
+)
+
+#print(melb_df['Price'].head(20))
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -2085,8 +2132,34 @@ print(citybike_df['time_of_day'].value_counts())
 
 
 ////////////
-///6.2.7///
+///12.3.1-12.3.2///
 //////////
+import pandas as pd
+
+melb_data = pd.read_csv('C:\Python\melb_data_fe.csv', sep=',')
+melb_df = melb_data.copy()
+#print(melb_df.head())
+#print(melb_df.info())
+
+3.1
+print(
+    melb_df.groupby(by='Rooms')['Lattitude'].mean().max()
+    )
+
+3.2
+print(
+    melb_df.groupby(by='Regionname')['Lattitude'].std().sort_values()
+    )
+
+3.3
+date1 = pd.to_datetime('2017-05-01')
+date2 = pd.to_datetime('2017-09-01')
+melb_df['Date'] = to_datetime(melb_df['Date'])
+mask1 = (date1 <= melb_df['Date']) & (melb_df['Date'] <= date2)
+print(
+    melb_df[mask1].groupby(by='SellerG')['Price'].sum().sort_values()
+    )
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

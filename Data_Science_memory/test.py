@@ -1,24 +1,16 @@
 import pandas as pd
+from pandas.core.tools.datetimes import to_datetime
 
-def time_of_day(times):
-    if 0<=times<=6:
-        return 'night'
-    elif 6<times<=12:
-        return 'morning'
-    elif 12<times<=18:
-        return 'day'
-    else:
-        return 'evening' 
+melb_data = pd.read_csv('C:\Python\melb_data_fe.csv', sep=',')
+melb_df = melb_data.copy()
+#print(melb_df.head())
+print(melb_df.info())
 
-citybike_data = pd.read_csv('C:\Python\citibike-tripdata.csv', sep=',')
+date1 = pd.to_datetime('2017-05-01')
+date2 = pd.to_datetime('2017-09-01')
+melb_df['Date'] = to_datetime(melb_df['Date'])
+mask1 = (date1 <= melb_df['Date']) & (melb_df['Date'] <= date2)
+print(
+    melb_df[mask1].groupby(by='SellerG')['Price'].sum().sort_values()
+    )
 
-citybike_df = citybike_data.copy()
-
-#print(citybike_df.head())
-#print(citybike_df.info())
-
-citybike_df['starttime'] = pd.to_datetime(citybike_df['starttime'])
-
-time_day = citybike_df['starttime'].dt.hour
-citybike_df['time_of_day'] = time_day.apply(time_of_day)
-print(citybike_df['time_of_day'].value_counts())
