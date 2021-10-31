@@ -2170,10 +2170,24 @@ print(
 
 
 
-////////////
-///6.2.7///
-//////////
+////////////////////
+///12.4.2-12.4.3///4.2 - проебал
+//////////////////
+import pandas as pd
+from pandas.core.tools.datetimes import to_datetime
 
+melb_data = pd.read_csv('C:\Python\melb_data_fe.csv', sep=',')
+melb_df = melb_data.copy()
+
+print(
+    melb_df.pivot_table(
+    values='Price',
+    index='SellerG',
+    columns='Type',
+    aggfunc='median',
+    fill_value=0
+)['unit']
+)
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 

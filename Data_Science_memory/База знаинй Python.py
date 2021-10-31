@@ -1,4 +1,5 @@
 from pandas.core.frame import DataFrame
+from pandas.core.groupby import groupby
 
 
 //////////////////
@@ -2532,13 +2533,94 @@ Western Metropolitan             34  {McGrath, Biggin, Bells, Rendina, Raine, Je
 Western Victoria                  6       {hockingstuart, Ray, HAR, Raine, YPA, other}
 
 
+//Построение сводных таблиц через .groupby()
+melb_df.groupby(['Rooms', 'Type'])['Price'].mean().unstack()
+    #Сортируем иак - строки - Type, столбцы - Rooms, Значекния - средняя цена
+Type          house     townhouse          unit
+Rooms
+1      8.668655e+05  5.927045e+05  3.899289e+05
+2      1.017238e+06  7.101585e+05  6.104905e+05
+3      1.109233e+06  9.847087e+05  8.505963e+05
+4      1.462283e+06  1.217092e+06  1.037476e+06
+5      1.877327e+06  1.035000e+06           NaN
+6      1.869508e+06           NaN  5.200000e+05
+7      1.920700e+06           NaN           NaN
+8      1.510286e+06           NaN  2.250000e+06
+10     9.000000e+05           NaN           NaN
 
+//Построение сводных таблиц через pivot_table()
+melb_df.pivot_table(
+    values='Landsize',
+    index='Regionname',
+    columns='Type',
+    aggfunc=['median', 'mean'],
+    fill_value=0
+)
+    values — имя столбца, по которому необходимо получить сводные данные, применяя агрегирующую функцию;
+    index — имя столбца, значения которого станут строками сводной таблицы;
+    columns — имя столбца, значения которого станут столбцами сводной таблицы;
+    aggfunc — имя или список имён агрегирующих функций (по умолчанию — подсчёт среднего, 'mean');
+    fill_value — значение, которым необходимо заполнить пропуски (по умолчанию пропуски не заполняются).    
+    
+                           median                        mean
+Type                        house townhouse unit        house   townhouse        unit
+Regionname
+Eastern Metropolitan        674.0     233.5  203   717.422847  269.440678  330.444444
+Eastern Victoria            843.0       0.0  230  3108.960000    0.000000  295.333333
+Northern Metropolitan       459.5     134.0    0   619.249092  317.325733  495.026538
+Northern Victoria           724.0       0.0    0  3355.463415    0.000000    0.000000
+South-Eastern Metropolitan  630.5     240.0  199   664.306701  212.160000  357.864865
+Southern Metropolitan       586.0     246.0    0   569.643881  278.858824  466.380245
+Western Metropolitan        531.0     198.0   62   507.883406  244.560669  557.637232
+Western Victoria            599.5       0.0    0   655.500000    0.000000    0.000000
 
+//Многомерные сводные таблицы
+pivot = melb_df.pivot_table(
+    values='Landsize',
+    index='Regionname',
+    columns='Type',
+    aggfunc=['median', 'mean'],
+    fill_value=0
+)
+#Мы передаем в параметры index или columns
+                           median                        mean
+Type                        house townhouse unit        house   townhouse        unit
+Regionname
+Eastern Metropolitan        674.0     233.5  203   717.422847  269.440678  330.444444
+Eastern Victoria            843.0       0.0  230  3108.960000    0.000000  295.333333
+Northern Metropolitan       459.5     134.0    0   619.249092  317.325733  495.026538
+Northern Victoria           724.0       0.0    0  3355.463415    0.000000    0.000000
+South-Eastern Metropolitan  630.5     240.0  199   664.306701  212.160000  357.864865
+Southern Metropolitan       586.0     246.0    0   569.643881  278.858824  466.380245
+Western Metropolitan        531.0     198.0   62   507.883406  244.560669  557.637232
+Western Victoria            599.5       0.0    0   655.500000    0.000000    0.000000
 
+#Доп функции
+pivot.columns #Выводит названия парамера columns
+    MultiIndex([('median',     'house'),
+                ('median', 'townhouse'),
+                ('median',      'unit'),
+                (  'mean',     'house'),
+                (  'mean', 'townhouse'),
+                (  'mean',      'unit')],
+            names=[None, 'Type'])
 
+display(pivot['mean']['unit']) #Обращение к данным
+Regionname
+Eastern Metropolitan          330.444444
+Eastern Victoria              295.333333
+Northern Metropolitan         495.026538
+Northern Victoria               0.000000
+South-Eastern Metropolitan    357.864865
+Southern Metropolitan         466.380245
+Western Metropolitan          557.637232
+Western Victoria                0.000000
+Name: unit, dtype: float64
 
-
-
+#Фильтрации
+mask = pivot['mean']['house'] < pivot['median']['house']
+filtered_pivot = pivot[mask]
+display(filtered_pivot)
 
 
 
