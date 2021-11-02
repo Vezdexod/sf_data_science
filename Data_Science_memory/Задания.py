@@ -2198,9 +2198,46 @@ print(
 
 
 ////////////
-///6.2.7///
+///12.7.5///
 //////////
+import pandas as pd
 
+items_df = pd.DataFrame({
+'item_id': [417283, 849734, 132223, 573943, 19475, 3294095, 382043, 302948, 100132, 312394], 
+'vendor': ['Samsung', 'LG', 'Apple', 'Apple', 'LG', 'Apple', 'Samsung', 'Samsung', 'LG', 'ZTE'],
+'stock_count': [54, 33, 122, 18, 102, 43, 77, 143, 60, 19]
+})
+
+purchase_df = pd.DataFrame({
+    'purchase_id': [101, 101, 101, 112, 121, 145, 145, 145, 145, 221],
+    'item_id': [417283, 849734, 132223, 573943, 19475, 3294095, 382043, 302948, 103845, 100132], 
+    'price': [13900, 5330, 38200, 49990, 9890, 33000, 67500, 34500, 89900, 11400]
+})
+
+#print(items_df)
+#print(purchase_df)
+
+"""
+Сформируйте DataFrame merged, в котором в результате объединения
+purchase_df и items_df останутся модели, которые учтены на складе и имели продажи. 
+"""
+merged = purchase_df.merge(
+    items_df,
+    on='item_id',
+    how='inner'
+)
+#print(merged)
+
+
+"""
+Найдите из таблицы merged суммарную выручку, которую можно было бы получить 
+от продажи всех товаров, которые есть на складе. 
+Результат занесите в переменную income.
+"""
+merged['total'] = merged['price'] * merged['stock_count']
+income = merged['total'].sum()
+#print(merged)
+#print(income)
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -2210,11 +2247,50 @@ print(
 
 
 
-////////////
-///6.2.7///
-//////////
+////////////////////
+///12.8.1-12.8.7///
+//////////////////
+import pandas as pd
+from pandas.core.tools.datetimes import to_datetime
+import re 
+
+def get_year_release(arg):
+    #находим все слова по шаблону "(DDDD)"
+    candidates = re.findall(r'\(\d{4}\)', arg) 
+    # проверяем число вхождений
+    if len(candidates) > 0:
+        #если число вхождений больше 0,
+	#очищаем строку от знаков "(" и ")"
+        year = candidates[0].replace('(', '')
+        year = year.replace(')', '')
+        return int(year)
+    else:
+        #если год не указан, возвращаем None
+        return None
 
 
+rating_movies_data = pd.read_csv('C:/Python/ratings_movies/ratings_movies.csv', sep=',')
+
+ratings_df = rating_movies_data.copy()
+#print(ratings_df)
+
+#12.8.1
+ratings_df['year_release'] = ratings_df['title'].apply(get_year_release)
+#print(ratings_df.info())
+
+#12.8.2
+for_1999 = ratings_df[(ratings_df['year_release'] == 1999)]
+ratings_1999 = for_1999.groupby(['title'])['rating'].mean()
+#print(ratings_1999.sort_values())
+
+#12.8.3
+for_2010 = ratings_df[(ratings_df['year_release'] == 2010)]
+ratings_2010 = for_2010.groupby(['genres'])['rating'].mean()
+#print(ratings_2010.sort_values())
+
+#12.8.4
+user_fan = ratings_df.groupby('userId')['genres'].nunique().sort_values()
+#print(user_fan)
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
