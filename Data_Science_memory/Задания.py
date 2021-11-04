@@ -2291,6 +2291,36 @@ ratings_2010 = for_2010.groupby(['genres'])['rating'].mean()
 #12.8.4
 user_fan = ratings_df.groupby('userId')['genres'].nunique().sort_values()
 #print(user_fan)
+
+#12.8.5
+#print(
+#    ratings_df.groupby('userId')['rating'].agg(
+#        ['count', 'mean']
+#    ).sort_values(['count', 'mean'], ascending=[True, False])
+#)
+
+#12.8.6
+mask = ratings_df['year_release'] == 2018
+grouped = ratings_df[mask].groupby('genres')['rating'].agg(
+    ['mean', 'count']
+)
+#print(
+#    grouped[grouped['count']>10].sort_values(
+#        by=['mean', 'count'],
+#        ascending=[False, False]
+#    )
+#)
+
+#12.8.7
+ratings_df['date'] = pd.to_datetime(ratings_df['date'])
+ratings_df['year_rating'] = ratings_df['date'].dt.year
+pivot = ratings_df.pivot_table(
+    index='year_rating',
+    columns='genres',
+    values='rating',
+    aggfunc='mean'
+)
+print(pivot['Comedy'])
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -2300,10 +2330,35 @@ user_fan = ratings_df.groupby('userId')['genres'].nunique().sort_values()
 
 
 
-////////////
-///6.2.7///
-//////////
+/////////////////////
+///12.8.8-12.8.10///
+///////////////////
+from numpy import left_shift
+import pandas as pd
+from pandas.core.tools.datetimes import to_datetime
+import re 
 
+orders_data = pd.read_csv('C:/Python/orders_and_products/orders.csv', sep=';')
+products_data = pd.read_csv('C:/Python/orders_and_products/products.csv', sep=';')
+
+orders_df = orders_data.copy()
+products_df = products_data.copy()
+#print(orders_df)
+#print(products_df)
+
+orders_product = orders_df.merge(
+    products_df,
+    left_on='ID товара',
+    right_on='Product_ID',
+    how='left'
+)
+#print(orders_product.sort_values(by='Дата создания'))
+#print(orders_product[orders_product['Отменен']=='Да']['ID Покупателя'])
+#print(orders_product.sort_values(by='ID Покупателя'))
+
+for i in range(orders_product['ID Покупателя'].max()):
+    clients_df = orders_product[orders_product['ID Покупателя'] == i]['Price'].sum()
+    print(i,' by on ',clients_df)
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
