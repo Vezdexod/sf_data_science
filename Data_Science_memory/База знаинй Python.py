@@ -2246,7 +2246,7 @@ asix = 0 #строки
 asix = 1 #столбцы
 
 /ОБРАЩЕНИЕ К ЭЛЕМЕНТАМ DATAFRAME
-countries_df.population 	#По имени столбцам
+countries_df.population 	#По имени столбца
 countries_df['population']	#По индексу
 
 //ЗАПИСЬ В CSV-ФАЙЛ
@@ -2288,10 +2288,12 @@ display(melb_data.head(n))  #Вывод n первых строк
 display(melb_data.tail(n))  #Вывод n послежних строк
 display(melb_data.shape)    #Вывод размерности
 
-
 //РАБОТА С ТАБЛИЦЕЙ
-display(melb_data.info())   #Получение информации о столбцах
-melb_data['Postcode'] = melb_data['Postcode'].astype('int64') #Преобразование типа данных столбца
+/Получение информации о столбцах
+display(melb_data.info())
+
+/Преобразование типа данных столбца
+melb_data['Postcode'] = melb_data['Postcode'].astype('int64') 
 
 //ПОЛУЧЕНИЕ ОПИСАТЕЛЬНОЙ СТАТИСТИКИ
 '''По умолчанию метод работает с числовыми (int64 и float64) столбцами и показывает число непустых 
@@ -2355,8 +2357,11 @@ display(melb_df['StreetType'])
 
 
 //РАБОТА С DATAFRAME
-melb_df = melb_data.copy() #Создание копии DataFrame
-melb_df = melb_df.drop(['index', 'Сoordinates'], axis=1) #Удаление столбцов
+/Создание копии DataFrame
+melb_df = melb_data.copy()
+
+/Удаление столбцов
+melb_df = melb_df.drop(['index', 'Сoordinates'], axis=1) 
     labels — порядковые номера или имена столбцов, которые подлежат удалению; 
     если их несколько, то передаётся список;
     axis — ось совершения операции, axis=0 — удаляются строки, axis=1 — удаляются столбцы;
@@ -2364,8 +2369,10 @@ melb_df = melb_df.drop(['index', 'Сoordinates'], axis=1) #Удаление ст
     на новый, при этом метод ничего не возвращает; если на False — возвращается копия DataFrame 
     без значений, подлежащих удалению, при этом первоначальный DataFrame не изменяется; по умолчанию 
     параметр равен False.
+
+/Совершение математических операций
 total_rooms = melb_df['Rooms'] + melb_df['Bedroom'] + melb_df['Bathroom']
-    #Возможно соверать математические операции над данными
+    
     
 //ПРЕОБРАЗОВАНИЕ В ТИП DATETIME
     
