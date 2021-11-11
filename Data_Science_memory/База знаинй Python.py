@@ -91,6 +91,8 @@ colors = 'red blue green'
 print(colors.split())
 # ['red', 'blue', 'green']
 #Результат работы этого метода — список строк.
+# Если нужно разделить по нескольким символам, то 
+str.split(',| |;')
 
 /Метод 'чем склеить'.join(список)
 #Соединяет элементы списка нужным символом
@@ -300,7 +302,13 @@ print('Transformed list', flat_list)
 ​
 
 
-/
+/Метод 'чем склеить'.join(список)
+#Соединяет элементы списка нужным символом
+colors = 'red green blue'
+colors_split = colors.split() # список цветов по отдельности
+colors_joined = ' and '.join(colors_split) # объединение строк
+print(colors_joined)
+# red and green and blue
 
 
 
@@ -2291,6 +2299,9 @@ display(melb_data.shape)    #Вывод размерности
 //РАБОТА С ТАБЛИЦЕЙ
 /Получение информации о столбцах
 display(melb_data.info())
+
+/Получение описательной статистики столбцов
+display(melb_data.describe())
 
 /Преобразование типа данных столбца
 melb_data['Postcode'] = melb_data['Postcode'].astype('int64') 
