@@ -1,3 +1,9 @@
-import plotly
-import plotly.express as px
-print(plotly.__version__)
+
+
+strii = ['a','b','acdce']
+
+
+
+print(' '.join(strii))
+
+
