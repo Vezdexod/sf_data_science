@@ -2555,6 +2555,31 @@ Southern Metropolitan            38  {McGrath, Thomson, Collins, Biggin, Cayzer,
 Western Metropolitan             34  {McGrath, Biggin, Bells, Rendina, Raine, Jelli...
 Western Victoria                  6       {hockingstuart, Ray, HAR, Raine, YPA, other}
 
+//РАЗБИЕНИЕ СТОЛБЦА НА НЕСКОЛЬКО ДРУГИХ
+import pandas as pd        
+df = pd.DataFrame({
+          'A':['a','b','a'],
+          'B':['b','a','c']
+        })
+df
+Out[]: 
+   A  B
+0  a  b
+1  b  a
+2  a  c
+# Get one hot encoding of columns B
+one_hot = pd.get_dummies(df['B'])
+# Drop column B as it is now encoded
+df = df.drop('B',axis = 1)
+# Join the encoded df
+df = df.join(one_hot)
+df  
+Out[]: 
+       A  a  b  c
+    0  a  0  1  0
+    1  b  1  0  0
+    2  a  0  0  1
+
 
 //ПОСТРОЕНИЕ СВОДНЫХ ТАБЛИЦ ЧЕРЕЗ .groupby()
 melb_df.groupby(['Rooms', 'Type'])['Price'].mean().unstack()
@@ -2646,6 +2671,12 @@ filtered_pivot = pivot[mask]
 display(filtered_pivot)
 
 //СКЛЕЙКА = КОНКАТЕНИРОВАНИЕ ТАБЛИЦ
+'left'
+'right'
+'inner'
+'full'
+
+
 ratings = pd.concat(
     [ratings1_df, ratings2_df],
     ignore_index=True
@@ -2909,8 +2940,7 @@ import plotly
 import plotly.express as px
 print(plotly.__version__)
 
-С помощью экспресс-режима (px) можно строить уже знакомые нам графики:
-
+////////////////С помощью экспресс-режима (px) можно строить уже знакомые нам графики:
 line() — линейные графики;
 histogram() — гистограммы;
 scatter() — диаграммы рассеяния;
@@ -3007,6 +3037,17 @@ fig.write_html("plotly/scatter_3d.html")
 
 /сохранение фигуры
 fig.write_html("plotly/scatter_3d.html")
+
+
+//Вывод нескольких графиков на одном
+import plotly.express as px
+import plotly.graph_objects as go
+
+fig1 = px.line(df, x='A', y='D')
+fig2 = px.line(df2, x='X', y='Y')
+
+fig = go.Figure(data = fig1.data + fig2.data)
+fig.show()
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
