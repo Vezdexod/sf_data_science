@@ -2369,9 +2369,42 @@ for i in range(orders_product['ID Покупателя'].max()):
 
 
 ////////////
-///6.2.7///
+///14.4.6///
 //////////
+import pandas as pd
 
+"""
+Ваша задача очистить данную таблицу от пропусков следующим образом:
+- Если признак имеет больше 50% пропущенных значений - удалите его
+- Если в строке 3 и более пропусков - удалите строку
+- Для оставшихся данных: числовые признаки заполните средним значением, а категориальные - модой
+"""
+df = pd.read_csv('./Root/data/test_data.csv')
+
+#print(df.head(10))
+
+#задаем минимальный порог: вычисляем 50% от числа строк
+thresh = df.shape[0]*0.5
+#удаляем столбцы, в которых 50% пропусков
+df = df.dropna(how='any', thresh=thresh, axis=1)
+
+#print(df.head(10))
+
+#удаляем записи, в которых есть 3 и более пропусков
+df = df.dropna(thresh=2, axis=0)
+
+#отображаем результирующую долю пропусков
+#print(df.head(10))
+
+
+df = df.fillna({
+    'one' : df['one'].mean(),
+    'two' : df['two'].mean(),
+    'three' : df['three'].mean(),
+    'four' : 'bar'#df['four'].mode() почему-то не работало
+}) 
+
+print(df.head(10))
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -2382,9 +2415,35 @@ for i in range(orders_product['ID Покупателя'].max()):
 
 
 ////////////
-///6.2.7///
+///14.6.4.1///
 //////////
+import pandas as pd
 
+def outliers_iqr_mod(data, feature):
+    """
+    Давайте немного модифицируем нашу функцию outliers_iqr(). 
+    Добавьте в нее параметры left и right, которые задают число IQR влево и вправо от границ ящика (пусть по умолчанию они равны 1.5).
+    Функция, как и раньше должна возвращать потенциальные выбросы и очищенный DataFrame.
+    """
+    x = data[feature]
+    quartile_1, quartile_3 = x.quantile(0.25), x.quantile(0.75),
+    left = 1.5
+    right = 1.5
+    iqr = quartile_3 - quartile_1
+    upper_bound = quartile_3 + (iqr * left)
+    lower_bound = quartile_1 - (iqr * right) 
+    
+    outliers = data[(x<lower_bound) | (x > upper_bound)]
+    cleaned = data[(x>lower_bound) & (x < upper_bound)]
+    return outliers, cleaned
+
+    
+sber_data = pd.read_csv('./Root/data/test_sber_data.csv')
+
+outliers, cleaned = outliers_iqr_mod(sber_data, 'full_sq')
+
+print('Vibrosi: ',outliers.shape[0])
+print('Itogo zapisei: ',cleaned.shape[0])
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -2395,9 +2454,36 @@ for i in range(orders_product['ID Покупателя'].max()):
 
 
 ////////////
-///6.2.7///
+///14.6.4.3///
 //////////
+import pandas as pd
+import numpy as np
 
+def outliers_z_score_mod(data, feature, log_scale=False, left=3, right=3):
+    """
+    Давайте расширим правило 3ех сигм, чтобы иметь возможность учитывать ассиметричность данных.
+    Добавьте в функцию outliers_z_score() параметры left и right, которые будут задавать число сигм (стандартных отклонений) 
+    влево и вправо соответственно, которые определяют границы метода z-отклонения. 
+    По умолчанию оба параметры равны 3
+    """
+    if log_scale:
+        x = np.log(data[feature]+1)
+    else:
+        x = data[feature]
+    mu = x.mean()                   #Вычислим математическое ожидание (среднее)
+    sigma = x.std()                 #Вычислим стандартное отклонение для признака x
+    lower_bound = mu - left * sigma    #Вычислим нижнюю границу интервала
+    upper_bound = mu + right * sigma    #Вычислим верхнюю границу интервала
+    outliers = data[(x < lower_bound) | (x > upper_bound)]
+    cleaned = data[(x > lower_bound) & (x < upper_bound)]
+    return outliers, cleaned
+
+sber_data = pd.read_csv('./Root/data/test_sber_data.csv')
+
+outliers, cleaned = outliers_z_score_mod(sber_data, 'mkad_km', log_scale=True, left=3, right=3.5)
+
+print('Vibrosi: ',outliers.shape[0])
+print('Itogo zapisei: ',cleaned.shape[0])
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -2408,9 +2494,36 @@ for i in range(orders_product['ID Покупателя'].max()):
 
 
 ////////////
-///6.2.7///
+///15.5.1///
 //////////
-
+class User():
+    def __init__(self, email, password, balance):
+        self.email = email
+        self.password = password
+        self.balance = balance
+        self.dict = {email:password,}
+        
+    def login(self, email, password):
+        if self.dict[email] == password:
+            #print(self.dict[email], 'and', password)
+            return True
+        else:
+            #print(self.dict[email], 'and', password)
+            return False
+    def update_balance(self, count):        
+        self.balance += count
+        return self.balance
+            
+            
+user = User("gosha@roskino.org", "qwerty", 20_000)
+user.login("gosha@roskino.org", "qwerty123")
+# => False
+user.login("gosha@roskino.org", "qwerty")
+# => True
+user.update_balance(200)
+user.update_balance(-500)
+print(user.balance)
+# => 19700
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -2421,9 +2534,13 @@ for i in range(orders_product['ID Покупателя'].max()):
 
 
 ////////////
-///6.2.7///
+///15.6.3///
 //////////
-
+class Dog():  
+    def bark(self):
+        return "Bark!"
+    def give_paw(self):
+        return "Paw"
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
