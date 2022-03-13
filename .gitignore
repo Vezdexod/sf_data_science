@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+Data_Science_memory/EDA1/wine.csv
+Data_Science_memory/EDA2/model.csv
+Data_Science_memory/EDA2/wine_cleared.csv
+Data_Science_memory/EDA3/country_area.csv
+Data_Science_memory/EDA3/country_population.csv
+Data_Science_memory/EDA3/wine_cleared.csv
+Data_Science_memory/EDA1/wine.txt
