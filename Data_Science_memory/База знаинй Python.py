@@ -4644,6 +4644,128 @@ data['year'] = data['title'].str.findall(regex).str.get(0)
 Однако при поиске числа методом data['title'].str.findall(regex) результатом выполнения является список найденных цифр. 
 Поэтому необходимо извлечь первый элемент из списка найденных методом str.get(0), где 0 — первый элемент в списке найденных чисел.
 
+/Кодирование категориальных признаков
+Ниже мы рассмотрим методы кодирования, обозначенные в блок-схеме. 
+Для кодирования категориальных признаков мы будем использовать библиотеку category_encoders. 
+Это удобная библиотека для кодирования категориальных переменных различными методами.
+
+
+pip install category_encoders
+
+import category_encoders as ce
+
+Рассмотрим следующие популярные способы кодирования: 
+    порядковое кодирование (Ordinal Encoding); 
+    однократное кодирование (OneHot Encoding); 
+    бинарное кодирование (Binary Encoding).
+    Метод fit_transform устанавливает соответствия для кодирования и преобразовывает данные в соответствие с ними. Затем используем метод concat() для добавления закодированного признака в датафрейм data.
+
+    import category_encoders as ce # импортируем библиотеку для работы с кодировщиками
+
+    ord_encoder = ce.OrdinalEncoder()
+    data_bin = ord_encoder.fit_transform(clothing[['size', 'type']])
+    clothing = pd.concat([clothing, data_bin], axis=1)
+
+    clothing
+
+
+Закодируем признак type в Python. Используем класс OneHotEncoding библиотеки category_encoders. 
+Укажем в cols наименование признака type для кодировки, иначе будут закодированы все строковые столбцы.
+
+    import category_encoders as ce # импорт для работы с кодировщиком
+
+    encoder = ce.OneHotEncoder(cols=['type']) # указываем столбец для кодирования
+    type_bin = encoder.fit_transform(clothing['type'])
+    clothing = pd.concat([clothing, type_bin], axis=1)
+
+    clothing
+
+
+
+
+pip install -U scikit-learn
+
+# для нормализации, стандартизации
+from sklearn import preprocessing
+
+# Для графиков
+import matplotlib
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+%matplotlib inline
+matplotlib.style.use('ggplot')
+
+//Нормализация
+Нормализация — один из методов преобразования входных признаков, 
+при котором значения признаков приводятся к заданному диапазону, например [0,...,1]. 
+/MINMAXSCALER
+# Копируем названия столбцов, которые теряются при использовании fit_transform()
+col_names = list(df.columns)
+
+# инициализируем нормализатор MinMaxScaler
+mm_scaler = preprocessing.MinMaxScaler()
+
+# копируем исходный датасет
+df_mm = mm_scaler.fit_transform(df)
+
+# Преобразуем промежуточный датасет в полноценный датафрейм для визуализации
+df_mm = pd.DataFrame(df_mm, columns=col_names)
+
+fig, (ax1) = plt.subplots(ncols=1, figsize=(10, 8))
+ax1.set_title('После нормализации MinMaxScaler')
+
+sns.kdeplot(df_mm['beta'], ax=ax1)
+sns.kdeplot(df_mm['exponential'], ax=ax1)
+sns.kdeplot(df_mm['normal_p'], ax=ax1)
+sns.kdeplot(df_mm['normal_l'], ax=ax1)
+
+
+/ROBUSTSCALER
+# Копируем названия столбцов, которые теряются при использовании fit_transform()
+col_names = list(df.columns)
+
+# инициализируем нормализатор RobustScaler
+r_scaler = preprocessing.RobustScaler()
+
+# копируем исходный датасет
+df_r = r_scaler.fit_transform(df)
+
+# Преобразуем промежуточный датасет в полноценный датафрейм для визуализации
+df_r = pd.DataFrame(df_r, columns=col_names)
+
+fig, (ax1) = plt.subplots(ncols=1, figsize=(10, 8))
+ax1.set_title('Распределения после RobustScaler')
+
+sns.kdeplot(df_r['beta'], ax=ax1)
+sns.kdeplot(df_r['exponential'], ax=ax1)
+sns.kdeplot(df_r['normal_p'], ax=ax1)
+sns.kdeplot(df_r['normal_l'], ax=ax1)
+
+//Стандартизация
+Стандартизация — ещё один метод преобразования входных признаков, 
+при котором изменяется распределение таким образом, чтобы среднее значений равнялось 0, а стандартное отклонение — 1. 
+
+# Копируем названия столбцов, которые теряются при использовании fit_transform()
+col_names = list(df.columns)
+
+# инициализируем стандартизатор StandardScaler
+s_scaler = preprocessing.StandardScaler()
+
+# копируем исходный датасет
+df_s = s_scaler.fit_transform(df)
+
+# Преобразуем промежуточный датасет в полноценный датафрейм для визуализации
+df_s = pd.DataFrame(df_s, columns=col_names)
+
+fig, (ax1) = plt.subplots(ncols=1, figsize=(10, 8))
+ax1.set_title('Распределения после StandardScaler')
+
+sns.kdeplot(df_s['beta'], ax=ax1)
+sns.kdeplot(df_s['exponential'], ax=ax1)
+sns.kdeplot(df_s['normal_p'], ax=ax1)
+sns.kdeplot(df_s['normal_l'], ax=ax1)
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
