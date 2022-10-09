@@ -3032,6 +3032,16 @@ fig = px.line(
 )
 fig.show()
 
+/histogram()
+fig = px.histogram(
+    hotels_df, 
+    x='additional_number_of_scoring',
+    marginal='box',
+    nbins=150,
+    title='Число людей с оценкой но без отзыва'            
+)
+fig.show();
+
 /bar()
 fig = px.bar(
     data_frame=bar_data, #DataFrame
@@ -4762,6 +4772,11 @@ sns.kdeplot(df_r['exponential'], ax=ax1)
 sns.kdeplot(df_r['normal_p'], ax=ax1)
 sns.kdeplot(df_r['normal_l'], ax=ax1)
 
+r_scaler = preprocessing.RobustScaler()
+data_array = np.array(wine_df['price']).reshape(-1,1)
+data_price_r = r_scaler.fit_transform(data_array)
+data_price_r.sum().round()
+
 //Стандартизация
 Стандартизация — ещё один метод преобразования входных признаков, 
 при котором изменяется распределение таким образом, чтобы среднее значений равнялось 0, а стандартное отклонение — 1. 
@@ -4794,10 +4809,55 @@ sns.kdeplot(df_s['normal_l'], ax=ax1)
 
 
 
-5.2
-/////////////////
-///ДЕКОРАТОРЫ///
-///////////////
+EDA1
+/////////////////////////////
+///EDA одной строкой кода///
+///////////////////////////
+К таким инструментам можно отнести следующие библиотеки Python, которые могут выполнять EDA всего одной строкой кода:
+
+    d-tale; 
+    pandas-profiling;
+    sweetviz.
+
+//PANDAS-PROFILING
+https://github.com/ydataai/pandas-profiling
+
+pip install pandas-profiling
+
+import pandas as pd
+from pandas_profiling import ProfileReport
+
+df = pd.read_csv('wine.csv')
+profile = ProfileReport(df, title="Wine Pandas Profiling Report")
+profile
+
+
+//SWEETVIZ
+https://github.com/fbdesignpro/sweetviz
+
+pip install sweetviz
+
+import pandas as pd
+import sweetviz as sv
+
+df = pd.read_csv('wine.csv')
+report = sv.analyze(my_dataframe)
+report.show_html()
+
+
+//D-TALE
+https://github.com/man-group/dtale
+
+pip install dtale
+
+import pandas as pd
+import dtale
+
+df = pd.read_csv('wine.csv')
+d = dtale.show(df)
+d
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
