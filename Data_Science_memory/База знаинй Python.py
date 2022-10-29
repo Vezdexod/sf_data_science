@@ -1,3 +1,9 @@
+from concurrent.futures.process import _ExecutorManagerThread
+from multiprocessing.resource_sharer import stop
+from pickletools import read_unicodestring4
+from tarfile import ExtractError
+
+
 //////////////////
 ///ТИПЫ ДАННЫХ///
 ////////////////
@@ -448,6 +454,8 @@ phones['+79033923029']
 
 /Метод .items()
 #
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -677,6 +685,8 @@ finally:
 
 //Вызов ошибки*
 raise ValueError("Invalid Date!")
+
+
 
 //Пример
 try:
@@ -1376,15 +1386,24 @@ print(root(81))
 /////////////////////////
 ///Модуль Collections///
 ///////////////////////
+Collections позволяет упростить написание кода при решении некоторых типовых задач, 
+таких как подсчёт числа различных элементов или создание словаря для хранения в нём списков.
+
 //Counter
 #Счетчик числа различных данных
-
+Давайте посмотрим, как используется счётчик. Вначале необходимо импортировать Counter из модуля collections, 
+а затем создать пустой экземпляр этого объекта:
 /
 # Импортируем объект Counter из модуля collections
 from collections import Counter
 # Создаём пустой объект Counter
 c = Counter()
 #Теперь в переменной c хранится объект с возможностями Counter.
+
+#Однако гораздо проще при создании Counter сразу передать в круглых скобках итерируемый объект, в котором необходимо посчитать значения:
+c = Counter(cars)
+print(c)
+# Counter({'red': 3, 'black': 3, 'blue': 2, 'white': 1})
 
 '''
 Рассмотрим базовый синтаксис этого инструмента. Например, будем считать 
@@ -1413,10 +1432,7 @@ for car in cars:
 print(c)
 # Counter({'red': 3, 'black': 3, 'blue': 2, 'white': 1})
 
-#Однако гораздо проще при создании Counter сразу передать в круглых скобках итерируемый объект, в котором необходимо посчитать значения:
-c = Counter(cars)
-print(c)
-# Counter({'red': 3, 'black': 3, 'blue': 2, 'white': 1})
+
 
 
 /Вычитание counter
@@ -1515,7 +1531,7 @@ for student, group in students:
 print(groups)
 # defaultdict(<class 'list'>, {1: ['Ivanov', 'Kuznetsova'], 4: ['Smirnov'], 3: ['Petrov', 'Markov'], 2: ['Nikitina', 'Pavlov']})
 
-//deque ("дэк")
+//deque ("дэк") Очереди и стеки
 #Очередь - первым пришёл, первым ушёл
 #Стек(рюкзак) - последним пришёл, первым ушёл
 #Инструмент для работы с очередями элементов
@@ -1617,7 +1633,7 @@ print(ordered_client_ages)
 #sorted(iterable,key=None,reverse=False)
 data = [('Ivan', 19),('Mark', 25),('Andrey', 23),('Maria', 20)]
 # Сортируем по второму значению из кортежа, то есть по возрасту
-ordered_client_ages = OrderedDict(sorted(data, key=lambda x: x[1]))
+ordered_client_ages = OrderedDict(sorted(data, key=lambda x: x[1]), reverse=False)
 print(ordered_client_ages)
 # OrderedDict([('Ivan', 19), ('Maria', 20), ('Andrey', 23), ('Mark', 25)])
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -4081,6 +4097,7 @@ while True:
 ///////////////
 ///METABASE///
 /////////////
+SQL
 Чтобы затегать используем:
 /* Такак конструкция
 для множества символов*/
