@@ -2991,6 +2991,8 @@ jointplot = sns.jointplot(
 )
 
 //Тепловая карта sns.heatmap()
+https://www.codecamp.ru/blog/seaborn-heatmap/
+https://datastart.ru/blog/read/seaborn-heatmaps-13-sposobov-nastroit-vizualizaciyu-matricy-korrelyacii
 sns.heatmap(data=pivot, cmap='YlGnBu')
 
 pivot = croped_covid_df.pivot_table(
