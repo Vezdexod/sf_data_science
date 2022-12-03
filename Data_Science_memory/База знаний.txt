@@ -5138,14 +5138,262 @@ experiment = Experiment(
 
 
 ML
-///////////
-///ML-2///
-/////////
+/////////////////////////////////////
+///МЕТОДЫ МАШИННОГО ОБУЧЕНИЯ (ML)///
+///////////////////////////////////
+см. ML_others.ipynb
+
+//РАЗДЕЛЕНИЕ выборки
+from sklearn.model_selection import train_test_split
+#Разделяем выборку на тренировочную и тестовую в соотношении 70/30
+#Устанавливаем random_state для воспроизводимости результатов 
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=40)
+#Выводим результирующие размеры таблиц
+print('Train:', X_train.shape, y_train.shape)
+print('Test:', X_test.shape, y_test.shape)
+
+
+
 //АНАЛИТИЧЕСКОЕ РЕШЕНИЕ "РЕГРЕССИИ" С ПОМОЩЬЮ NUMPY
 см ML2.ipynb
-\
-//АНАЛИТИЧЕСКОЕ РЕШЕНИЕ С ПОМОЩЬЮ SKLEARN
+def linear_regression(X, y):
+    #Создаём вектор из единиц
+    ones = np.ones(X.shape[0])
+    #Добавляем вектор к таблице первым столбцом
+    X = np.column_stack([ones, X])
+    #Вычисляем обратную матрицу Q
+    Q = np.linalg.inv(X.T @ X)
+    #Вычисляем вектор коэффициентов
+    w = Q @ X.T @ y
+    return w
+#Вычисляем параметры линейной регрессии
+w = linear_regression(X, y)
+#Выводим вычисленные значения параметров в виде вектора
+print('Vector w: {}'.format(w))
+#Выводим параметры с точностью до двух знаков после запятой
+print('w0 = {:.2f}'.format(w[0]))
+print('w1 = {:.2f}'.format(w[1]))
+
+
+
+//АНАЛИТИЧЕСКОЕ РЕШЕНИЕ "РЕГРЕССИИ" С ПОМОЩЬЮ SKLEARN
 см ML2.ipynb
+#Создаём объект класса LinearRegression
+lr_lstat = linear_model.LinearRegression()
+#Обучаем модель — ищем параметры по МНК
+lr_lstat.fit(X, y) 
+print('w0 = {}'.format(lr_lstat.intercept_)) #свободный член w0
+print('w1 = {}'.format(lr_lstat.coef_)) #остальные параметры модели w1, w2, ..., wm
+
+#Предсказываем медианную цену для всех участков из набора данных
+y_predict = lr_lstat.predict(X)
+
+
+
+//ЧИСЛЕННОЕ РЕШЕНИЕ "РЕГРЕССИИ" С ПОМОЩЬЮ SKLEARN
+см ML2.ipynb
+#Создаём объект класса линейной регрессии с SGD
+sgd_lr_full = linear_model.SGDRegressor(random_state=42)
+#Обучаем модель — ищем параметры по методу SGD
+sgd_lr_full.fit(X, y)
+print('w0: {}'.format(sgd_lr_full.intercept_)) #свободный член w0
+print('w1: {}'.format(sgd_lr_full.coef_)) #остальные параметры модели w1, w2, ..., wm
+
+#Предсказываем медианную цену для всех участков из набора данных
+y_predict = sgd_lr_full.predict(X)
+#Рассчитываем коэффициент детерминации
+print('R2 score: {:.3f}'.format(metrics.r2_score(y, y_predict)))
+
+
+
+//МЕТРИКИ РЕШЕНИЯ "РЕГРЕССИИ"
+см ML2.ipynb
+from sklearn import metrics
+
+#Делаем предсказание по всем признакам
+y_predict_full = lr_full.predict(boston_data[features])
+#Рассчитываем MAE
+print('MAE score: {:.3f} thou. $'.format(metrics.mean_absolute_error(y, y_predict_full)))
+#Рассчитываем RMSE
+print('RMSE score: {:.3f} thou. $'.format(np.sqrt(metrics.mean_squared_error(y, y_predict_full))))
+#Рассчитываем MAPE
+print('MAPE score: {:.3f} %'.format(metrics.mean_absolute_percentage_error(y, y_predict_full) * 100))
+#Рассчитываем коэффициент детерминации
+print('R2 score: {:.3f}'.format(metrics.r2_score(y, y_predict_full)))
+
+
+
+//СМЕЩЕНИЕ (НЕДООБУЧЕНИЕ) И РАЗБРОС (ПЕРЕОБУЧЕНИЕ)
+см ML2.ipynb
+Стандартизацию (нормализацию) полезнее проводить перед 
+генерацией полиномиальных признаков, иначе можно потерять масштаб полиномов.
+#Инициализируем стандартизатор StandardScaler
+scaler = preprocessing.StandardScaler()
+#Подгоняем параметры стандартизатора (вычисляем среднее и СКО)
+scaler.fit(X_train)
+#Производим стандартизацию тренировочной выборки
+X_train_scaled = scaler.transform(X_train)
+#Производим стандартизацию тестовой выборки
+X_test_scaled = scaler.transform(X_test)
+ 
+#Создаём генератор полиномиальных признаков
+poly = preprocessing.PolynomialFeatures(degree=2, include_bias=False)
+poly.fit(X_train_scaled)
+#Генерируем полиномиальные признаки для тренировочной выборки
+X_train_scaled_poly = poly.transform(X_train_scaled)
+#Генерируем полиномиальные признаки для тестовой выборки
+X_test_scaled_poly = poly.transform(X_test_scaled)
+#Выводим результирующие размерности таблиц 
+print(X_train_scaled_poly.shape)
+print(X_test_scaled_poly.shape)
+
+
+/L1-регуляризация
+#Создаём объект класса линейной регрессии с L1-регуляризацией
+lasso_lr_poly = linear_model.Lasso(alpha=0.1)
+#Обучаем модель
+lasso_lr_poly.fit(X_train_scaled_poly, y_train)
+#Делаем предсказание для тренировочной выборки
+y_train_predict_poly = lasso_lr_poly.predict(X_train_scaled_poly)
+#Делаем предсказание для тестовой выборки
+y_test_predict_poly = lasso_lr_poly.predict(X_test_scaled_poly)
+#Рассчитываем коэффициент детерминации для двух выборок
+print("Train R^2: {:.3f}".format(metrics.r2_score(y_train, y_train_predict_poly)))
+print("Test R^2: {:.3f}".format(metrics.r2_score(y_test, y_test_predict_poly)))
+
+/L2-регуляризация
+#Создаём объект класса линейной регрессии с L2-регуляризацией
+ridge_lr_poly = linear_model.Ridge(alpha=10)
+#Обучаем модель
+ridge_lr_poly.fit(X_train_scaled_poly, y_train)
+#Делаем предсказание для тренировочной выборки
+y_train_predict_poly = ridge_lr_poly.predict(X_train_scaled_poly)
+#Делаем предсказание для тестовой выборки
+y_test_predict_poly = ridge_lr_poly.predict(X_test_scaled_poly)
+#Рассчитываем коэффициент детерминации для двух выборок
+print("Train R^2: {:.3f}".format(metrics.r2_score(y_train, y_train_predict_poly)))
+print("Test R^2: {:.3f}".format(metrics.r2_score(y_test, y_test_predict_poly)))
+ 
+ЛУЧШЕ ТА, У КОТОРОЙ ВЫШЕ ПОКАЗАТЕЛИ НА ТЕСТОВОЙ ВЫБОРКЕ
+
+#Создаём список из 20 возможных значений от 0.001 до 1
+alpha_list = np.linspace(0.001, 1, 20)
+#Создаём пустые списки, в которые будем добавлять результаты 
+train_scores = []
+test_scores = []
+for alpha in alpha_list:
+    #Создаём объект класса линейной регрессии с L1-регуляризацией
+    lasso_lr_poly = linear_model.Lasso(alpha=alpha, max_iter=10000)
+    #Обучаем модель
+    lasso_lr_poly.fit(X_train_scaled_poly, y_train)
+    #Делаем предсказание для тренировочной выборки
+    y_train_predict_poly = lasso_lr_poly.predict(X_train_scaled_poly)
+    #Делаем предсказание для тестовой выборки
+    y_test_predict_poly = lasso_lr_poly.predict(X_test_scaled_poly)
+    #Рассчитываем коэффициенты детерминации для двух выборок и добавляем их в списки
+    train_scores.append(metrics.r2_score(y_train, y_train_predict_poly))
+    test_scores.append(metrics.r2_score(y_test, y_test_predict_poly))
+
+#Визуализируем изменение R^2 в зависимости от alpha
+fig, ax = plt.subplots(figsize=(12, 4)) #фигура + координатная плоскость
+ax.plot(alpha_list, train_scores, label='Train') #линейный график для тренировочной выборки
+ax.plot(alpha_list, test_scores, label='Test') #линейный график для тестовой выборки
+ax.set_xlabel('Alpha') #название оси абсцисс
+ax.set_ylabel('R^2') #название оси ординат
+ax.set_xticks(alpha_list) #метки по оси абсцисс
+ax.xaxis.set_tick_params(rotation=45) #поворот меток на оси абсцисс
+ax.legend(); #отображение легенды   
+
+//ЛОГИСТИЧЕСКАЯ РЕГРЕССИЯ В КЛАССИФИКАЦИИ С ПОМОЩЬЮ SKLEARN
+#Создаем объект класса логистическая регрессия
+log_reg = linear_model.LogisticRegression(random_state=42, max_iter=1000)
+#Обучаем модель, минизируя logloss
+log_reg.fit(X, y)
+#Выводим результирующие коэффициенты
+print('w0: {}'.format(log_reg.intercept_)) #свободный член w0
+print('w1, w2: {}'.format(log_reg.coef_)) #остальные параметры модели w1, w2, ..., wm
+
+#Значения концентации глюкозы и индекса массы тела для пациента
+x_new = [[180, 51]]
+#Делаем ПРЕДСКАЗАНИЕ ВЕРОЯТНОСТИ:
+y_new_proba_predict = log_reg.predict_proba(x_new)
+print('Predicted probabilities: {}'.format(np.round(y_new_proba_predict, 2)))
+
+#Значения концентации глюкозы и индекса массы тела для пациента
+x_new = [[180, 51]]
+#Делаем ПРЕДСКАЗАНИЕ КЛАССА:
+y_new_predict = log_reg.predict(x_new)
+print('Predicted class: {}'.format(y_new_predict))
+
+//МЕТРИКИ КЛАССИФИКАЦИИ
+#Модель log_reg_full:
+#Рассчитываем accuracy
+print('Accuracy: {:.2f}'.format(metrics.accuracy_score(y, y_pred2)))
+#Рассчитываем precision
+print('Precision: {:.2f}'.format(metrics.precision_score(y, y_pred2)))
+#Рассчитываем recall
+print('Recall: {:.2f}'.format(metrics.recall_score(y, y_pred2)))
+#Рассчитываем F1-меру
+print('F1 score: {:.2f}'.format(metrics.f1_score(y, y_pred2)))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
