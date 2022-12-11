@@ -4737,6 +4737,14 @@ import category_encoders as ce
 
     clothing
 
+/dummy
+Напомним, что у библиотеки pandas есть дефолтный метод get_dummies() для получения 
+однократного кодирования признаков. 
+Однако OneHotEncoder способен принимать на вход как таблицы, так и numpy-массивы.
+
+dummy_data = pd.get_dummies(shoppers_data)
+dummy_data.head()
+
 Закодируем признак type в Python. Используем класс BinaryEncoding библиотеки category_encoders. 
 Укажем в cols наименование признака type для кодировки, иначе будут закодированы все строковые столбцы.
 
@@ -4784,7 +4792,6 @@ sns.kdeplot(df_mm['beta'], ax=ax1)
 sns.kdeplot(df_mm['exponential'], ax=ax1)
 sns.kdeplot(df_mm['normal_p'], ax=ax1)
 sns.kdeplot(df_mm['normal_l'], ax=ax1)
-
 
 /ROBUSTSCALER
 # Копируем названия столбцов, которые теряются при использовании fit_transform()
