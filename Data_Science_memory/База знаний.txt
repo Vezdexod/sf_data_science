@@ -5336,13 +5336,25 @@ print('Recall: {:.2f}'.format(metrics.recall_score(y, y_pred2)))
 #Рассчитываем F1-меру
 print('F1 score: {:.2f}'.format(metrics.f1_score(y, y_pred2)))
 
+Алгоритмов сэмплирования, в том числе SMOTE, нет в стандартном пакете 
+sklearn — они содержатся в библиотеке imblearn (imbalanced-learn). 
+Команды для установки приведены дале
 
+pip install imbalanced-learn
+для Conda
+conda install -c conda-forge imbalanced-learn
 
+from imblearn.over_sampling import SMOTE
 
+Примечание. Если вы используете среду Anaconda, у вас может возникнуть следующая ошибка при импорте библиотеки imblearn:
 
+ImportError: cannot import name '_euclidean_distances' from 'sklearn.metrics.pairwise'
+В этом случае обновите пакеты Anaconda:
 
+conda update conda
+После этого произведите установку пакета ещё раз:
 
-
+!conda install -c conda-forge imbalanced-learn
 
 
 
