@@ -1,7 +1,177 @@
 {
     "response": {
-        "count": 3961,
+        "count": 3962,
         "items": [
+            {
+                "id": 2794407,
+                "from_id": -63683472,
+                "owner_id": -63683472,
+                "date": 1673710774,
+                "marked_as_ads": 0,
+                "comments": {
+                    "can_post": 1,
+                    "count": 18,
+                    "groups_can_post": true
+                },
+                "attachments": [
+                    {
+                        "type": "photo",
+                        "photo": {
+                            "album_id": -7,
+                            "date": 1673710774,
+                            "id": 457504111,
+                            "owner_id": -63683472,
+                            "access_key": "f8dfd1139fb29a0be3",
+                            "sizes": [
+                                {
+                                    "height": 56,
+                                    "type": "s",
+                                    "width": 75,
+                                    "url": "https://sun1-93.userapi.com/impg/cbP30hvZ_KxB1ycYQONXrOsxnMNxu_eFZHjcOQ/XcBlr67USdI.jpg?size=75x56&quality=95&sign=f44aeefed18a6ee7e6c101773f4f2bac&c_uniq_tag=yn5CHJqIaWl3X3mp2cw8EdVqCguxUVuhBYqdE63ANmk&type=album"
+                                },
+                                {
+                                    "height": 97,
+                                    "type": "m",
+                                    "width": 130,
+                                    "url": "https://sun1-93.userapi.com/impg/cbP30hvZ_KxB1ycYQONXrOsxnMNxu_eFZHjcOQ/XcBlr67USdI.jpg?size=130x97&quality=95&sign=4e342cec31def8fbbf503b28dcc99954&c_uniq_tag=0iw70Vj2SOQBs0u6D5yjzuj2ZYFK53SHQ3IL7r79_-U&type=album"
+                                },
+                                {
+                                    "height": 453,
+                                    "type": "x",
+                                    "width": 604,
+                                    "url": "https://sun1-93.userapi.com/impg/cbP30hvZ_KxB1ycYQONXrOsxnMNxu_eFZHjcOQ/XcBlr67USdI.jpg?size=604x453&quality=95&sign=77fab8144920d4da113968df42510f02&c_uniq_tag=iiFDnW07kGSt0WoIYlA-7V-Z-fTtuH2acZzoCglYrZY&type=album"
+                                },
+                                {
+                                    "height": 605,
+                                    "type": "y",
+                                    "width": 807,
+                                    "url": "https://sun1-93.userapi.com/impg/cbP30hvZ_KxB1ycYQONXrOsxnMNxu_eFZHjcOQ/XcBlr67USdI.jpg?size=807x605&quality=95&sign=e1612c489eb06964a8f0e7b478de2671&c_uniq_tag=lnURhZCnu6qiNrKdHM6uj7g3gFa6-tJb1sjJWt2-Tpw&type=album"
+                                },
+                                {
+                                    "height": 900,
+                                    "type": "z",
+                                    "width": 1200,
+                                    "url": "https://sun1-93.userapi.com/impg/cbP30hvZ_KxB1ycYQONXrOsxnMNxu_eFZHjcOQ/XcBlr67USdI.jpg?size=1200x900&quality=95&sign=0fb4dd6b56f41f638429046d2c90df47&c_uniq_tag=nfKmHxda-Lgs98n8W6_OPISn4YRDBwYfLQYqKAo41B0&type=album"
+                                },
+                                {
+                                    "height": 97,
+                                    "type": "o",
+                                    "width": 130,
+                                    "url": "https://sun1-93.userapi.com/impg/cbP30hvZ_KxB1ycYQONXrOsxnMNxu_eFZHjcOQ/XcBlr67USdI.jpg?size=130x97&quality=95&sign=4e342cec31def8fbbf503b28dcc99954&c_uniq_tag=0iw70Vj2SOQBs0u6D5yjzuj2ZYFK53SHQ3IL7r79_-U&type=album"
+                                },
+                                {
+                                    "height": 150,
+                                    "type": "p",
+                                    "width": 200,
+                                    "url": "https://sun1-93.userapi.com/impg/cbP30hvZ_KxB1ycYQONXrOsxnMNxu_eFZHjcOQ/XcBlr67USdI.jpg?size=200x150&quality=95&sign=f3802de2e64494d60b4ea21c93e63238&c_uniq_tag=RaDEoXvZ8Qd27icehqI6pRp2EypfsBoEQbOOfo3ziks&type=album"
+                                },
+                                {
+                                    "height": 240,
+                                    "type": "q",
+                                    "width": 320,
+                                    "url": "https://sun1-93.userapi.com/impg/cbP30hvZ_KxB1ycYQONXrOsxnMNxu_eFZHjcOQ/XcBlr67USdI.jpg?size=320x240&quality=95&sign=2300d4c6d7598d87f11586c4ebefb06b&c_uniq_tag=DS0BgMWxjQgpRQBnymhStZVWY6ceGnnXrIpB88QVPRU&type=album"
+                                },
+                                {
+                                    "height": 382,
+                                    "type": "r",
+                                    "width": 510,
+                                    "url": "https://sun1-93.userapi.com/impg/cbP30hvZ_KxB1ycYQONXrOsxnMNxu_eFZHjcOQ/XcBlr67USdI.jpg?size=510x382&quality=95&sign=ea10e93d1607e98432b0e9eec08fa28b&c_uniq_tag=H6AcUBdbMw2vZtPVvMR3Qb5m7gQJKZGipB6ohoO9Vt8&type=album"
+                                }
+                            ],
+                            "text": "",
+                            "user_id": 100
+                        }
+                    },
+                    {
+                        "type": "photo",
+                        "photo": {
+                            "album_id": -7,
+                            "date": 1673710774,
+                            "id": 457504112,
+                            "owner_id": -63683472,
+                            "access_key": "949c946faed1be5467",
+                            "sizes": [
+                                {
+                                    "height": 56,
+                                    "type": "s",
+                                    "width": 75,
+                                    "url": "https://sun1-30.userapi.com/impg/xdSLTKmKxpSoPC1gpHUe-QgrN4xLtwq8CY8Xyw/ifWPjC9V7JA.jpg?size=75x56&quality=95&sign=cac6436f5b3911248b0a3970cfe2e772&c_uniq_tag=6L5StVzUr48TGhTGcBi3R9IbQRz2RsWrtb3Q8eaHLbM&type=album"
+                                },
+                                {
+                                    "height": 97,
+                                    "type": "m",
+                                    "width": 130,
+                                    "url": "https://sun1-30.userapi.com/impg/xdSLTKmKxpSoPC1gpHUe-QgrN4xLtwq8CY8Xyw/ifWPjC9V7JA.jpg?size=130x97&quality=95&sign=47afc8ee12225b87ea8ed6ac479599d8&c_uniq_tag=sSDaLX1wKy5gnTQiKfeU4Ni0mfrPsIKuYhDIoQgbEIQ&type=album"
+                                },
+                                {
+                                    "height": 453,
+                                    "type": "x",
+                                    "width": 604,
+                                    "url": "https://sun1-30.userapi.com/impg/xdSLTKmKxpSoPC1gpHUe-QgrN4xLtwq8CY8Xyw/ifWPjC9V7JA.jpg?size=604x453&quality=95&sign=4f86431bd7c08a9f040b10a979f7d694&c_uniq_tag=SP69Bm_7ZWABibVPT0CV6hcN0Ws_nOqSI_qZ-f-8Yog&type=album"
+                                },
+                                {
+                                    "height": 605,
+                                    "type": "y",
+                                    "width": 807,
+                                    "url": "https://sun1-30.userapi.com/impg/xdSLTKmKxpSoPC1gpHUe-QgrN4xLtwq8CY8Xyw/ifWPjC9V7JA.jpg?size=807x605&quality=95&sign=ff7bde6a3001d7c6d80e6a3476de0edf&c_uniq_tag=ld671SvH0CNKhbZ2F5FHtGHsVR3A3iE0mVnajgKi36Y&type=album"
+                                },
+                                {
+                                    "height": 900,
+                                    "type": "z",
+                                    "width": 1200,
+                                    "url": "https://sun1-30.userapi.com/impg/xdSLTKmKxpSoPC1gpHUe-QgrN4xLtwq8CY8Xyw/ifWPjC9V7JA.jpg?size=1200x900&quality=95&sign=e3f636ae2b4ecc320b5921a081a9753a&c_uniq_tag=CWN5sfzHQaHMO6Wz3vUkCnbUYgIupKGwUTPz2yFzUms&type=album"
+                                },
+                                {
+                                    "height": 97,
+                                    "type": "o",
+                                    "width": 130,
+                                    "url": "https://sun1-30.userapi.com/impg/xdSLTKmKxpSoPC1gpHUe-QgrN4xLtwq8CY8Xyw/ifWPjC9V7JA.jpg?size=130x97&quality=95&sign=47afc8ee12225b87ea8ed6ac479599d8&c_uniq_tag=sSDaLX1wKy5gnTQiKfeU4Ni0mfrPsIKuYhDIoQgbEIQ&type=album"
+                                },
+                                {
+                                    "height": 150,
+                                    "type": "p",
+                                    "width": 200,
+                                    "url": "https://sun1-30.userapi.com/impg/xdSLTKmKxpSoPC1gpHUe-QgrN4xLtwq8CY8Xyw/ifWPjC9V7JA.jpg?size=200x150&quality=95&sign=70f9d1acf17c50a007bf5488110b0384&c_uniq_tag=ApJ7JL7K5yono8NXi2g8ZykTJMXN2yt-UepvTg4YRrw&type=album"
+                                },
+                                {
+                                    "height": 240,
+                                    "type": "q",
+                                    "width": 320,
+                                    "url": "https://sun1-30.userapi.com/impg/xdSLTKmKxpSoPC1gpHUe-QgrN4xLtwq8CY8Xyw/ifWPjC9V7JA.jpg?size=320x240&quality=95&sign=9bfef1358597254319d2daa3eb2f46ae&c_uniq_tag=vdH8JYZM03K2cFBUAZ-AHjwfrP6y9TKMNFhqgbWczk4&type=album"
+                                },
+                                {
+                                    "height": 382,
+                                    "type": "r",
+                                    "width": 510,
+                                    "url": "https://sun1-30.userapi.com/impg/xdSLTKmKxpSoPC1gpHUe-QgrN4xLtwq8CY8Xyw/ifWPjC9V7JA.jpg?size=510x382&quality=95&sign=77e03a8da49b475296954a89aa4fb186&c_uniq_tag=_f4QLQ1yr23CUWRgNxdSE04t8nbfbeKBuuAe8WC4ddE&type=album"
+                                }
+                            ],
+                            "text": "",
+                            "user_id": 100
+                        }
+                    }
+                ],
+                "likes": {
+                    "can_like": 1,
+                    "count": 12,
+                    "user_likes": 0,
+                    "can_publish": 1
+                },
+                "post_source": {
+                    "platform": "iphone",
+                    "type": "api"
+                },
+                "post_type": "post",
+                "reposts": {
+                    "count": 1,
+                    "user_reposted": 0
+                },
+                "text": "Последствия сегодняшнего обстрела Украины ВС РФ:\n\n— МВД Молдовы сообщило о падении обломков ракеты на севере страны;\n\n— Харьков и область полностью обесточены в результате ракетного удара;\n\n— Аварийные отключения электроэнергии введены в Винницкой и Черкасской областях Украины;\n\n— Во Львовской области ВС РФ попали по объекту критической инфраструктуры. Власти предупредили о возможных перебоях со светом и водой.",
+                "views": {
+                    "count": 2449
+                },
+                "hash": "AX4yxU2STgaNOFWxCw"
+            },
             {
                 "id": 2794126,
                 "from_id": -63683472,
@@ -10,7 +180,7 @@
                 "marked_as_ads": 0,
                 "comments": {
                     "can_post": 1,
-                    "count": 97,
+                    "count": 130,
                     "groups_can_post": true
                 },
                 "attachments": [
@@ -42,14 +212,14 @@
                             "id": 456255864,
                             "owner_id": -63683472,
                             "title": "Вы только посмотрите на этот асфальт в Лос-Анджелесе. Почему у нас так не могут?",
-                            "track_code": "video_9df3ee6c8c6FCWSlNKbR8JaLmT_nonfR_gmxY0FuCOJNOS4UcOfK7pwIZcw-otzzleabCtGQQuTGP4VnNg9kjk0oAyJD",
-                            "views": 4547
+                            "track_code": "video_df095fa9s66gv-A9A_wEMNg1UKec2d1fh22apVWRae7221rB2zuIjrm-4VQJ-Akz21hSkqrr6Gq_W66hIvAFgvbKd_fo",
+                            "views": 5790
                         }
                     }
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 25,
+                    "count": 32,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -63,7 +233,7 @@
                 },
                 "text": "Вы только посмотрите на этот асфальт в Лос-Анджелесе. Почему у нас так не могут?",
                 "views": {
-                    "count": 4222
+                    "count": 5374
                 },
                 "hash": "BfILzg6fcn5UVZT8IQ"
             },
@@ -75,7 +245,7 @@
                 "marked_as_ads": 0,
                 "comments": {
                     "can_post": 1,
-                    "count": 60,
+                    "count": 107,
                     "groups_can_post": true
                 },
                 "attachments": [
@@ -151,7 +321,7 @@
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 106,
+                    "count": 112,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -160,12 +330,12 @@
                 },
                 "post_type": "post",
                 "reposts": {
-                    "count": 15,
+                    "count": 16,
                     "user_reposted": 0
                 },
                 "text": "В Брянской области сержант расстрелял избившего его майора \n\nКонфликт между майором Александром Кудилиным и сержантом Владимиром Чуриловым (на фото) произошел еще ночью 3 января на территории приграничного поселка Белая Березка.\n\nВ ходе ссоры майор избил сержанта, который в ответ начал стрелять. Кудилин погиб на месте",
                 "views": {
-                    "count": 8572
+                    "count": 9096
                 },
                 "hash": "sqj3JcpjCXdyZNuUeA"
             },
@@ -177,7 +347,7 @@
                 "marked_as_ads": 0,
                 "comments": {
                     "can_post": 1,
-                    "count": 147,
+                    "count": 157,
                     "groups_can_post": true
                 },
                 "attachments": [
@@ -253,7 +423,7 @@
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 44,
+                    "count": 48,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -262,12 +432,12 @@
                 },
                 "post_type": "post",
                 "reposts": {
-                    "count": 23,
+                    "count": 25,
                     "user_reposted": 0
                 },
                 "text": "В Совете по правам человека предложили внести в Уголовный кодекс термин «предатель» России\n\n«На законодательном уровне необходимо начать с определения юридического понятия \"предатель\", возможно, через внесение соответствующих поправок и изменений в статью 275 УК РФ \"Государственная измена\"», — заявил член СПЧ Кирилл Кабанов, добавив, что любое проявление предательства должно быть наказано.\n\nЧлен СПЧ добавил, что в ближайшее время с коллегами подготовит позицию по проблеме «предателей» России и обсудит её с законодателями из-за того, что в последнее время обсуждается множество вариантов наказаний.",
                 "views": {
-                    "count": 8353
+                    "count": 8797
                 },
                 "hash": "4XrIkmFFX6NT5rSdUw"
             },
@@ -279,7 +449,7 @@
                 "marked_as_ads": 0,
                 "comments": {
                     "can_post": 1,
-                    "count": 99,
+                    "count": 108,
                     "groups_can_post": true
                 },
                 "attachments": [
@@ -311,14 +481,14 @@
                             "id": 456255869,
                             "owner_id": -63683472,
                             "title": "Полиция Новороссийска проверяет продуктовый магазин на «пропаганду ЛГБТ» из-за логотипа с радугой",
-                            "track_code": "video_b547e12borBAAYMBNIiTmyVe8p34ubPSLjNXCLmEVh_lXkJUnJGZkFkAgmg-jJ6fITDwqM6LhucWBW4MzuU6c-VPb2Kv",
-                            "views": 8797
+                            "track_code": "video_65d84b51gceFKi_dpikoXIjztCa_Wo-7E4IFLdlUziR3xlnU1ha655wrLrSsLSVYjJ22E4louo4rtDwprjWiSHfXdOLl",
+                            "views": 9676
                         }
                     }
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 51,
+                    "count": 55,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -327,12 +497,12 @@
                 },
                 "post_type": "post",
                 "reposts": {
-                    "count": 31,
+                    "count": 35,
                     "user_reposted": 0
                 },
                 "text": "Полиция Новороссийска проверяет продуктовый магазин на «пропаганду ЛГБТ» из-за логотипа с радугой\n\nПродуктовый на улице Карамзина работает уже около 20 лет. На нём висит вывеска с логотипом радуги в круге, а под ней — рукопожатие. Несколько дней назад магазин атаковал неизвестный со словами «у вас магазин пидорасов» и сфотографировал вывеску. Позже продуктовый навестила полиция, которая взяла объяснения с продавцов и уехала.\n\nРаботники продуктового охарактеризовали доносчика как «дебила» и «неграмотного человека». СМИ уточняют, что в данный момент идёт проверка.\n\nТем не менее руководство магазина уже решило убрать логотип, чтобы «не объяснять всем подряд», что в нём нет ничего такого.",
                 "views": {
-                    "count": 7091
+                    "count": 7402
                 },
                 "hash": "KNlSEhuaIOAlTwlgUQ"
             },
@@ -420,7 +590,7 @@
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 141,
+                    "count": 144,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -429,12 +599,12 @@
                 },
                 "post_type": "post",
                 "reposts": {
-                    "count": 36,
+                    "count": 43,
                     "user_reposted": 0
                 },
                 "text": "Ну наконец-то",
                 "views": {
-                    "count": 7839
+                    "count": 8150
                 },
                 "hash": "rM3hCBL34l0nTADG3g"
             },
@@ -763,7 +933,7 @@
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 132,
+                    "count": 138,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -772,12 +942,12 @@
                 },
                 "post_type": "post",
                 "reposts": {
-                    "count": 45,
+                    "count": 47,
                     "user_reposted": 0
                 },
                 "text": "Медведев на совещании по газификации в РФ: а кто-то переходит на уголь и дрова, но это не у нас\n\nТем временем не у нас (и это только недавние новости):",
                 "views": {
-                    "count": 8976
+                    "count": 9335
                 },
                 "hash": "eAmLMcM2UHEmwfkwjw"
             },
@@ -821,14 +991,14 @@
                             "id": 456255868,
                             "owner_id": -63683472,
                             "title": "Современные реалии России…",
-                            "track_code": "video_696e1d6cr0KDJ80cDEjel9gwHtPuUNieHo0kS9KbUaZJ_qM9Y2GUYpomzHUGTNOT3l0d5thi7asmuxxPpfo9yknvjgtQ",
-                            "views": 7331
+                            "track_code": "video_801247a3HOQjmMyCnVUK64tetR1xRu-_lAhjh0YtBbNSxDviTj8nxDqZzeuXUQfvjTO2KEd02oqsPluDMUxp31LVFtR9",
+                            "views": 7632
                         }
                     }
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 129,
+                    "count": 133,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -837,12 +1007,12 @@
                 },
                 "post_type": "post",
                 "reposts": {
-                    "count": 34,
+                    "count": 35,
                     "user_reposted": 0
                 },
                 "text": "Современные реалии России…",
                 "views": {
-                    "count": 6144
+                    "count": 6414
                 },
                 "hash": "NVn4_wWfWNpx6hpA0A"
             },
@@ -924,7 +1094,7 @@
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 53,
+                    "count": 55,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -938,7 +1108,7 @@
                 },
                 "text": "Либерализация по-российски — всем зэкам можно будет носить очки.",
                 "views": {
-                    "count": 5939
+                    "count": 6166
                 },
                 "hash": "HRJkIlG9HIqwezVCjg"
             },
@@ -982,14 +1152,14 @@
                             "id": 456255866,
                             "owner_id": -63683472,
                             "title": "Участники военной операции, в том числе бывшие заключенные из ЧВК «Вагнер», имеют все навыки, чтобы стать депутатами, заявил деп",
-                            "track_code": "video_8630e1a2W5Pp4Ij_Jm-XNmTBc5fMDGWtCyeEmF0zuJvNxb6eCGFgs_DhiZYsa5oyZ6d2ovo-UJgzEbKcKlLU983Uk6g7",
-                            "views": 7650
+                            "track_code": "video_6053b297uLXZA79IGrOLR5uLF3tx2sZpXpPQQ1i5zy2WF4E1ZDaDlcACviEQt4ZDmO0STkfo81xmpeZHL9ijQZYGrANX",
+                            "views": 7815
                         }
                     }
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 79,
+                    "count": 84,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -998,12 +1168,12 @@
                 },
                 "post_type": "post",
                 "reposts": {
-                    "count": 60,
+                    "count": 64,
                     "user_reposted": 0
                 },
                 "text": "Участники военной операции, в том числе бывшие заключенные из ЧВК «Вагнер», имеют все навыки, чтобы стать депутатами, заявил депутат Госдумы Андрей Гурулев",
                 "views": {
-                    "count": 7456
+                    "count": 7618
                 },
                 "hash": "o_S2ZzE1dAIouc34QA"
             },
@@ -1133,7 +1303,7 @@
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 3,
+                    "count": 4,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -1148,7 +1318,7 @@
                 "signer_id": 265871743,
                 "text": "В мире столько крутых хобби! Настолки, медитация, кастом одежды, геймдев... \n \nНо если люди вокруг тебя впервые слышат о ДнД с или не готовы срываться в другие города автостопом, в letz talk ты всегда найдёшь того, кто разделяет твои интересы 😌 \n \n— Собрать команду для текстовой ролевой \n \n— Найти тиммэйта для амбициозного проекта \n \n— Выйти на пробежку в 5 утра... \n \nЛюбое увлечение можно разделить с таким же фанатиком! \nБолее 25000 анкет и высокий онлайн не дадут соврать – к нам приходят за качественным общением👌 \n \nРегистрируйся прямо сейчас\n\nhttps://letztalk.page.link/Ezhr",
                 "views": {
-                    "count": 4183
+                    "count": 4302
                 },
                 "hash": "_L_cU5eE2fSV9nDy0w"
             },
@@ -1160,7 +1330,7 @@
                 "marked_as_ads": 0,
                 "comments": {
                     "can_post": 1,
-                    "count": 100,
+                    "count": 101,
                     "groups_can_post": true
                 },
                 "attachments": [
@@ -1192,14 +1362,14 @@
                             "id": 456255863,
                             "owner_id": -63683472,
                             "title": "Не служивших россиян старше 30 лет будут отправлять на военные сборы.",
-                            "track_code": "video_6a80b3d8wX0iBkAobCrKK4QoeV9_t15iWdlVpLvjTMRpfIO3nM36XTsHQUFmLscuj0Z8akmFa1dh72agzIIgqGltroGv",
-                            "views": 7466
+                            "track_code": "video_04ca7b31Jml0wYy_KMJ1J0HAucIfjWE_YHxdGBNalDuD2G49qWEdSW3AjdYixngiSq689ym_VApYSm4cZDv4V4PJQwua",
+                            "views": 7607
                         }
                     }
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 46,
+                    "count": 47,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -1208,12 +1378,12 @@
                 },
                 "post_type": "post",
                 "reposts": {
-                    "count": 75,
+                    "count": 77,
                     "user_reposted": 0
                 },
                 "text": "Не служивших россиян старше 30 лет будут отправлять на военные сборы.\n\nОб этом в интервью пропагандистскому ресурсу «ура.ру» заявил депутат Госдумы РФ Виктор Соболев.\n\nСборы также будут проводиться для мужчин в запасе или резерве, у которых нет никакой военной специальности, утверждает он.",
                 "views": {
-                    "count": 7098
+                    "count": 7242
                 },
                 "hash": "1LW5ChNBIlqTyzRtUQ"
             },
@@ -1225,7 +1395,7 @@
                 "marked_as_ads": 0,
                 "comments": {
                     "can_post": 1,
-                    "count": 76,
+                    "count": 77,
                     "groups_can_post": true
                 },
                 "attachments": [
@@ -1289,7 +1459,7 @@
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 80,
+                    "count": 84,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -1298,12 +1468,12 @@
                 },
                 "post_type": "post",
                 "reposts": {
-                    "count": 39,
+                    "count": 42,
                     "user_reposted": 0
                 },
                 "text": "В Подмосковье собирают теплые вещи для психиатрической больницы, где лежат новоиспеченные ветераны войны в Украине. \n\n«Там много наших ребят, которые воевали на Украине, потеряли память после боевых ранений. Простым языком, потеряли рассудок!»\n\nМинобороны на душевнобольных плевать, разумеется.",
                 "views": {
-                    "count": 7674
+                    "count": 7793
                 },
                 "hash": "Om4p99cQ9qhittFfFA"
             },
@@ -1479,7 +1649,7 @@
                 },
                 "text": "❗️У ЧВК «Вагнер» постоянно пытаются «украсть победу», заявил Евгений Пригожин\n\n«Меня не очень беспокоят действия США, это серьёзный противник, но в данный момент не ключевой. Значительный урон может нанести наша коррупция, бюрократия и чиновники, которые хотят остаться на своих местах.\n\nУ ЧВК \"Вагнер\" постоянно пытаются украсть победу и рассказывают о присутствии непонятно кого, лишь бы принизить их заслуги. Призываю поддержать парней, которым тяжело на фронте, и в комментариях упоминать то, что они есть и они выполняют свою тяжёлую работу для того, чтобы россияне спали спокойно»\n\n11 января Пригожин сообщил, что ЧВК «Вагнер» взяла под контроль всю территорию Соледара, и что в штурме города «не участвовали никакие подразделения, кроме бойцов ЧВК». Минобороны РФ сообщило о взятии Соледара 13 января. В ведомстве заявили, что это стало возможно благодаря ударам авиации и артиллерии российских войск, а также подразделениям ВДВ, которые заняли высоты и блокировали Соледар.",
                 "views": {
-                    "count": 9134
+                    "count": 9235
                 },
                 "hash": "mQr0yloAM2zKHKq-4Q"
             },
@@ -1567,7 +1737,7 @@
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 64,
+                    "count": 66,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -1581,7 +1751,7 @@
                 },
                 "text": "Додик облажался.",
                 "views": {
-                    "count": 6645
+                    "count": 6749
                 },
                 "hash": "1lhFQJ_LLr-AvtWKIg"
             },
@@ -1593,13 +1763,13 @@
                 "marked_as_ads": 0,
                 "comments": {
                     "can_post": 1,
-                    "count": 342,
+                    "count": 345,
                     "groups_can_post": true
                 },
                 "attachments": [],
                 "likes": {
                     "can_like": 1,
-                    "count": 23,
+                    "count": 24,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -1614,7 +1784,7 @@
                 },
                 "text": "⚡️Минобороны РФ заявило о взятии Соледара\n\nУстановление контроля над Соледаром позволяет отрезать пути снабжения украинских войск в Артёмовске, после чего заблокировать и взять в котёл остающиеся в нём украинские войска, сообщили в ведомстве.",
                 "views": {
-                    "count": 5410
+                    "count": 5500
                 },
                 "hash": "PRqyjfJ4JtcwWu8EeQ"
             },
@@ -2191,7 +2361,7 @@
                 },
                 "text": "Жители тюменского города Ишим пожаловались на состояние детского инфекционного отделения областной больницы №4. \n\nЧиновники ответили, что рассмотрение вопроса «будет зависеть от финансирования».",
                 "views": {
-                    "count": 5211
+                    "count": 5284
                 },
                 "hash": "YGyj2YYk2Urs9C4jcw"
             },
@@ -2235,14 +2405,14 @@
                             "id": 456255857,
                             "owner_id": -63683472,
                             "title": "Пропаганда объясняет",
-                            "track_code": "video_f07447b0D2XAGkd2IqG4GBXT0cNXvbFgP05rX8xBz5QlDeuHrgM0RdkbRh8opbUeH7Xc9mGPhFUHe1xbuyCj-CUcxrGd",
-                            "views": 10003
+                            "track_code": "video_e8ffa891PJyMxK5wgqehGG_1ow7OJVxov50rHAWwJ_NsLpofqLYHvJXFrxmIo6weZZOuO_gXaV2HqBwYctFLn2w_tymb",
+                            "views": 10071
                         }
                     }
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 109,
+                    "count": 111,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -2251,12 +2421,12 @@
                 },
                 "post_type": "post",
                 "reposts": {
-                    "count": 82,
+                    "count": 83,
                     "user_reposted": 0
                 },
                 "text": "Россия могла закончить войну еще в мае, но специально не стала этого делать, чтобы провести глубокие революционные реформы и духовную мобилизацию общества\n\nПропаганда объясняет",
                 "views": {
-                    "count": 8857
+                    "count": 8917
                 },
                 "hash": "J0_L0Sgg72-i1PdEIw"
             },
@@ -2344,7 +2514,7 @@
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 106,
+                    "count": 111,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -2358,7 +2528,7 @@
                 },
                 "text": "Инженер из «Объединенной двигателестроительной корпорации – Сатурн» позирует для внутреннего календаря с надписью «точность», измеряя диаметр детали не той стороной штангенциркуля\n\nА потом они этими руками двигатели собирают",
                 "views": {
-                    "count": 6622
+                    "count": 6700
                 },
                 "hash": "eFE0RaFNB6QqK1QX_w"
             },
@@ -2452,7 +2622,7 @@
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 106,
+                    "count": 108,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -2466,7 +2636,7 @@
                 },
                 "text": "Минутка важных новостей от Захаровой.",
                 "views": {
-                    "count": 7697
+                    "count": 7752
                 },
                 "hash": "g1QoyghGIQDtXl0J8A"
             },
@@ -2478,7 +2648,7 @@
                 "marked_as_ads": 0,
                 "comments": {
                     "can_post": 1,
-                    "count": 244,
+                    "count": 250,
                     "groups_can_post": true
                 },
                 "attachments": [
@@ -2554,7 +2724,7 @@
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 66,
+                    "count": 72,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -2563,12 +2733,12 @@
                 },
                 "post_type": "post",
                 "reposts": {
-                    "count": 70,
+                    "count": 75,
                     "user_reposted": 0
                 },
                 "text": "В Госдуме предложили отправлять «всю молодёжь» России на полгода на военные сборы\n\nВсю российскую молодёжь необходимо обучить военным специальностям, заявил член комитета Госдумы по обороне, генерал-лейтенант Виктор Соболев. Такие меры он объяснил необходимостью повышения боеспособности в случае крупномасштабной войны:\n\n«Обученного мобилизационного резерва для ведения крупномасштабной войны, если её НАТО развяжет, у нас нет. В армии у нас служил один из 10, а 9 человек из 10 в армии не служили. Какой они резерв составят? Нужно всё менять: проводить сборы, нужно обучать молодых людей в системе ДОСААФ»\n\nПо мнению депутата, военно-учётную специальность должны иметь «100% молодых людей», а обучаться им необходимо минимум полгода.",
                 "views": {
-                    "count": 11060
+                    "count": 11780
                 },
                 "hash": "gDxWtj--q-VoJ_kWuQ"
             },
@@ -2580,7 +2750,7 @@
                 "marked_as_ads": 0,
                 "comments": {
                     "can_post": 1,
-                    "count": 216,
+                    "count": 218,
                     "groups_can_post": true
                 },
                 "attachments": [
@@ -2612,14 +2782,14 @@
                             "id": 456255854,
                             "owner_id": -63683472,
                             "title": "Жители Белгородской области, сидящие под обстрелами, начали что-то подозревать. Жалуются Путину, что живут в страхе и «отдуваютс",
-                            "track_code": "video_d85dc0cc2HW14XLmVFH6CS9lx-gmXu4qA4n9625YB62q08CnbCrjVazgc49eVfcPLwzG3RBs2x87vMnvGTlrwarC7ZFf",
-                            "views": 20410
+                            "track_code": "video_59cdcae0iNxH39eSnnEKXYcS-Kyi4yqHluSKmJOSQQxzKk65mVCz_F7e1vuUdQdbh3v5mZTRH7Ku0b6c5PMtYHM7Y4-q",
+                            "views": 20731
                         }
                     }
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 277,
+                    "count": 282,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -2628,12 +2798,12 @@
                 },
                 "post_type": "post",
                 "reposts": {
-                    "count": 101,
+                    "count": 102,
                     "user_reposted": 0
                 },
                 "text": "«Владимир Владимирович, мы за вас голосовали. Мы вам верили. Почему нас бросили?»\n\nЖители Белгородской области, сидящие под обстрелами, начали что-то подозревать. Жалуются Путину, что живут в страхе и «отдуваются за всю страну». \n\n«Cколько мы можем мучиться? Мы вынуждены страдать за что? Выделяются деньги на маткапитал, строятся школы, но нам никакой помощи. Нас никто не слышит, не обращает внимания», — говорит жительница Шебекино. \n\nГлава региона Гладков тем временем не знает, будет ли Минобороны защищать белгородцев от регулярных обстрелов.",
                 "views": {
-                    "count": 17696
+                    "count": 17986
                 },
                 "hash": "ax7AG-1bibpxFchmzw"
             },
@@ -2796,7 +2966,7 @@
                 },
                 "text": "Пропаганда радостно сообщает, что скоро в Украине будут воевать роботы-собаки с лазерами. \n\nНо есть нюанс: песёли — якобы патриотично российские — на самом деле производятся в Китае и продаются на AliExpress.",
                 "views": {
-                    "count": 7611
+                    "count": 7653
                 },
                 "hash": "YNzpD6RisAOGeCs7JA"
             },
@@ -2808,7 +2978,7 @@
                 "marked_as_ads": 0,
                 "comments": {
                     "can_post": 1,
-                    "count": 188,
+                    "count": 189,
                     "groups_can_post": true
                 },
                 "attachments": [
@@ -2872,7 +3042,7 @@
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 720,
+                    "count": 728,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -2881,12 +3051,12 @@
                 },
                 "post_type": "post",
                 "reposts": {
-                    "count": 413,
+                    "count": 420,
                     "user_reposted": 0
                 },
                 "text": "Блядь",
                 "views": {
-                    "count": 30326
+                    "count": 30787
                 },
                 "hash": "kNYYkC984a2og8u3Fg"
             },
@@ -2898,7 +3068,7 @@
                 "marked_as_ads": 0,
                 "comments": {
                     "can_post": 1,
-                    "count": 152,
+                    "count": 153,
                     "groups_can_post": true
                 },
                 "attachments": [
@@ -2930,14 +3100,14 @@
                             "id": 456255838,
                             "owner_id": -63683472,
                             "title": "Учительница устроила драку с пятиклассницей из-за электронной сигареты в школе Красноярска",
-                            "track_code": "video_295966edPX9zdMHOHiyF4wXBcmHRb4FQod06tqdKupj9Wp6iGf0GX2p1wKcUKIjkDqlyVOddtGWZ7gKy0CvW9P1Ls5Qq",
-                            "views": 7677
+                            "track_code": "video_5270bac5fA2qRe3GI2_sjHA1T2WTvE5hDyy62IqGOWxCK-uchmNHLbNE7K8pa-GLe11PUKWOe1Q3H4Lc_edVAEI6xqq1",
+                            "views": 7732
                         }
                     }
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 32,
+                    "count": 33,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -2951,7 +3121,7 @@
                 },
                 "text": "Учительница устроила драку с пятиклассницей из-за электронной сигареты в школе Красноярска\n\nПредварительно, потасовка началась из-за того, что педагог узнала о том, что школьница курит и решила отобрать у неё электронную сигарету. В ответ девочка облила её водой.\n\nВ результате школьница получила травму: у неё сломан палец. Руководство школы заявило, что конфликт был решён, родители не стали обращаться в полицию, педагога-ветерана труда не уволили. Однако правление образования региона после обращения родителей начало проверку.",
                 "views": {
-                    "count": 6328
+                    "count": 6378
                 },
                 "hash": "FWVhKTJzT0zXuN52Ww"
             },
@@ -3045,7 +3215,7 @@
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 53,
+                    "count": 54,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -3054,12 +3224,12 @@
                 },
                 "post_type": "post",
                 "reposts": {
-                    "count": 29,
+                    "count": 30,
                     "user_reposted": 0
                 },
                 "text": "Ефрейтору из Башкирии дали 5 лет колонии за отказ воевать в Украине. \n\nВ мае 24-летний ефрейтор Марсель Кандаров не явился к месту службы, потому что не захотел умирать воевать. Спустя полгода его задержали. \n\nСуд обвинил контрактника в самовольном оставлении службы на срок свыше месяца «в период мобилизации» (ч. 5 ст. 337 УК). \n\nВ конце декабря по этой статье вынесли приговоры (три и пять лет) двум военным, не вернувшимся из отпуска.",
                 "views": {
-                    "count": 6705
+                    "count": 6761
                 },
                 "hash": "W9wXPSqSFdUsNS6ARg"
             },
@@ -3155,7 +3325,7 @@
                 },
                 "text": "",
                 "views": {
-                    "count": 6676
+                    "count": 6693
                 },
                 "hash": "vZry1MQdcpj89xZ4pw"
             },
@@ -3199,8 +3369,8 @@
                             "id": 456255839,
                             "owner_id": -63683472,
                             "title": "«Живой уголок» с тараканами открылся в школе №40 во Владимире",
-                            "track_code": "video_fd8b638dDUTrGWggfF3Rg7skbpG29F_6sjoRjNeFwYzpBJcHn4Y2ZPIYaUl2WdyEvk1qpIDGas-KCSiIoOSt4OkVujGs",
-                            "views": 6450
+                            "track_code": "video_0b9d63e2n4OSNylSx8_Qcn8g60aR2_pqE3qEDmpwhcs3VoBbSwuko4s2KDvNy911eknvc6fpz18rSb0KHRHppzdHrW14",
+                            "views": 6465
                         }
                     }
                 ],
@@ -3220,7 +3390,7 @@
                 },
                 "text": "«Живой уголок» с тараканами открылся в школе №40 во Владимире\n\nШкольников встретила настоящая колония тараканов в первый день после каникул. Насекомые ползают по стене около столовой и раздевалки на 1 этаже.\n\nДиректор школы Дмитрий Кушпита заявил, что ничего критичного в учебном заведении не происходит, а с тараканами человечество вообще борется уже несколько миллионов лет. \n\n«То, что выкладывают в соцсетях – гораздо страшнее, чем то, что в нашей суровой действительности. Такое ощущение, что у нас в стране больше новостей нет, кроме школы №40, директора-балбеса и тараканов», — добавил он.",
                 "views": {
-                    "count": 6162
+                    "count": 6180
                 },
                 "hash": "hUjLKjaZRTWFsqb3pA"
             },
@@ -3232,7 +3402,7 @@
                 "marked_as_ads": 0,
                 "comments": {
                     "can_post": 1,
-                    "count": 336,
+                    "count": 337,
                     "groups_can_post": true
                 },
                 "attachments": [
@@ -3363,7 +3533,7 @@
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 204,
+                    "count": 206,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -3372,12 +3542,12 @@
                 },
                 "post_type": "post",
                 "reposts": {
-                    "count": 178,
+                    "count": 181,
                     "user_reposted": 0
                 },
                 "text": "«Вагнеровца», до смерти избившего свою мать, как героя похоронили на Урале.\n\n46-летнего Сергея Молодцова завербовали в ЧВК в колонии — в 2017-м ему дали 11,5 лет за убийство собственной матери. \n\nВ администрации Серова душегуба и уголовника назвали «творческой натурой» и «рубахой-парнем», который занимался резьбой по кости и «любил свободу». \n\nТеперь преступник там герой: его гроб несли военные, а на прощании выступали ветераны, говорившие о «мужестве».",
                 "views": {
-                    "count": 19486
+                    "count": 19820
                 },
                 "hash": "i24I7L5dYzPgfDWrrg"
             },
@@ -3389,7 +3559,7 @@
                 "marked_as_ads": 0,
                 "comments": {
                     "can_post": 1,
-                    "count": 77,
+                    "count": 78,
                     "groups_can_post": true
                 },
                 "attachments": [
@@ -3465,7 +3635,7 @@
                 ],
                 "likes": {
                     "can_like": 1,
-                    "count": 137,
+                    "count": 144,
                     "user_likes": 0,
                     "can_publish": 1
                 },
@@ -3474,12 +3644,12 @@
                 },
                 "post_type": "post",
                 "reposts": {
-                    "count": 70,
+                    "count": 73,
                     "user_reposted": 0
                 },
                 "text": "Добровольно ушедший на войну чиновник внезапно оказался в гостинице в Москве. Там его обвинил в заманивании в номер и изнасиловании эмигрант из Южной Кореи\n\nЗамглавы Госкомитета по занятости Якутии, член КПРФ Савва Михайлов утверждает, что просто «помог» корейцу и собирается подавать в суд за «страшную клевету». Полиция проводит проверку.\n\nМихайлов пошел воевать добровольцем в октябре, но, по его словам, уже в декабре временно был в России «по состоянию здоровья».",
                 "views": {
-                    "count": 13163
+                    "count": 13530
                 },
                 "hash": "BIvslU4ekMmuKgSuxA"
             },
@@ -3949,7 +4119,7 @@
                 },
                 "text": "Премиальный подарок мужчине!\nШахматы и нарды с именной гравировкой из массива дуба, латуни и натуральной кожи.\n\nПосмотреть цены https://vk.cc/ciauDG",
                 "views": {
-                    "count": 5406
+                    "count": 5420
                 },
                 "hash": "pXPCAfrer10-XmxRBg"
             },
@@ -4426,7 +4596,7 @@
                 },
                 "text": "Водитель? Рассчитай стоимость ковриков ЭВА на свой авто самостоятельно за 1 минуту на онлайн-конструкторе.\n\nДаем одни из лучших условий:\n\n— оплата при получении\n— с бортами или без бортов\n— гарантия 1 год или 100 000 км пробега\n— срок службы больше 3-х лет\n— тест-драйв 30 дней (Если не понравится — вернем деньги!)\n\nПисать никуда не нужно, подбери на свой авто онлайн в конструкторе: https://vk.cc/ch9xtu",
                 "views": {
-                    "count": 5509
+                    "count": 5524
                 },
                 "hash": "A-ruLX92zIqt49jS0Q"
             },
@@ -4528,7 +4698,7 @@
                 },
                 "text": "В Питере у школьного педагога нашли архив детского порно с его учениками на рабочем компьютере. \n\nО необычных предпочтениях мужчины узнали случайно, его коллега с учениками воспользовались компьютером, который был закреплен за Георгием. Судя по датам, шокирующий контент был создан летом прошлого года, когда преподаватель работал вожатым в детском лагере. \n\nОдну из растлённых девочек уже удалось установить – это ученица 6 класса. На снимках были и другие дети, их личности пока не установлены.",
                 "views": {
-                    "count": 8586
+                    "count": 8600
                 },
                 "hash": "phq2TcuGgzAq8kQyag"
             },
@@ -4624,7 +4794,7 @@
                 },
                 "text": "Нужны помощники на удаленную подработку на OZON!\nС тебя всего 3 пункта:\n\n1. Готовность уделять 2-3 часа в день работе.\n2. Гарантия того, что после первых денег ты не пропадёшь.\n3. Компьютер/ноутбук или хороший телефон с быстрым интернетом.\n\nЯ покажу пошаговую схему работы с \"0\" до стабильного дохода на маркетплейсах. Отвечу на все вопросы, покажу как находить проверенных хороших заказчиков.\n\nРабота простая, но ответственная. Доход зависит от нагрузки. Чем больше проектов берешь тем больше зарабатываешь. Работа есть всегда!\n\nСвоей пошаговой инструкцией делюсь вот тут, переходи по ссылке:\nhttps://vk.com/app5898182_-210351503#u=1556139&s=1556921&force=1?utm_source=t7_k1&utm_term=tvk_vk\n\nКому подойдет:\n— работникам в найме;\n— мамам в декрете;\n— студентам;\n— всем, кто хочет иметь дополнительный источник дохода без вложений.\n\nЧто нужно делать:\nЕсли вкратце, то нужно заполнять карточки товаров. А именно загружать картинки, добавлять описание товаров. Вести простую табличку.\nВсему научу, если будешь действовать по моей рабочей схеме — проблем не возникнет.\n\nЕсли хочешь разобраться в нюансах и начать стабильно зарабатывать на OZON, переходи по ссылке и бесплатно получи мою инструкцию (которой нет в свободном доступе):\nhttps://vk.com/app5898182_-210351503#u=1556139&s=1556921&force=1?utm_source=t7_k1&utm_term=tvk_vk\n\nНо это предложение не для халявщиков, которые после первых денег уйдут в загул. Нужны только ответственные люди, которые реально хотят зарабатывать.\n\nЭто не \"легкие деньги\". Нужно потратить несколько вечеров, чтоб разобраться во всех тонкостях.\n\nДействуй! У тебя получится!",
                 "views": {
-                    "count": 6376
+                    "count": 6387
                 },
                 "hash": "ESUV6bAp3GqpkmqCnQ"
             },
@@ -4788,12 +4958,12 @@
                 },
                 "post_type": "post",
                 "reposts": {
-                    "count": 45,
+                    "count": 46,
                     "user_reposted": 0
                 },
                 "text": "Мама мобилизованного из-за холода в квартире живёт в саду. Власти велели ей не жаловаться. \n\nПроблемы с трубами в квартире 62-летней пенсионерки из Магнитогорска начались ещё 10 лет назад. Вопрос с теплом всегда решал сын, но в сентябре его отправили на войну. \n\nЧтобы не замёрзнуть, она переехала в садовый домик, где топит печку. Утром внутри там +19, а на улице в это время — минус 32. \n\nВ конце декабря женщина написала губернатору Челябинской области Текслеру. В ответ на просьбу решить вопрос, её попросили «никуда больше не обращаться и не жаловаться».",
                 "views": {
-                    "count": 14053
+                    "count": 14071
                 },
                 "hash": "KgiauHg05zZZkzYFVQ"
             },
@@ -4890,12 +5060,12 @@
                 },
                 "post_type": "post",
                 "reposts": {
-                    "count": 57,
+                    "count": 58,
                     "user_reposted": 0
                 },
                 "text": "Китай собирается возобновить отношения с Западом и отдалиться от России, — Financial Times.\n\nИздание, ссылаясь на источники, сообщает, что Владимир Путин не предупредил главу КНР Си Цзиньпина о готовящейся [Роскомнадзоре] — это якобы повлияло на отношения с Китаем и даже привело к понижению в должности замглавы МИД Китая, который не спрогнозировал действия РФ.\n\nТакже издание утверждает, что КНР «признаёт вероятность поражения РФ в Украине», где Россия выйдет из украинского конфликта «второстепенной державой с меньшим политическим и экономическим влиянием на мировой арене».",
                 "views": {
-                    "count": 8732
+                    "count": 8744
                 },
                 "hash": "P2YTA6y3PwTiXL59bw"
             },
@@ -4939,8 +5109,8 @@
                             "id": 456255835,
                             "owner_id": -63683472,
                             "title": "Минутка невыдуманных историй, о которых невозможно молчать.",
-                            "track_code": "video_24e280c2HLviL7aLubIyAUQV1_ca3xQFLC_EzaAnHmrvCbgYj3wnm_sut-Kztj4PQHzQwiztITAUHPHJ10ZyBu8YlS68",
-                            "views": 12337
+                            "track_code": "video_6c15c292BHqy3giitGPNOx3CyeKrNuzJEqns3OJdRV-4Y9jjwkw_WqvfCcu-Z8E1GavO150E2fwqmtnYlTwpM7hy9dXx",
+                            "views": 12411
                         }
                     }
                 ],
@@ -4960,7 +5130,7 @@
                 },
                 "text": "Минутка невыдуманных историй, о которых невозможно молчать.",
                 "views": {
-                    "count": 8412
+                    "count": 8424
                 },
                 "hash": "MCNv6JIGvIqSRmyVNA"
             },
@@ -5198,12 +5368,12 @@
                 },
                 "post_type": "post",
                 "reposts": {
-                    "count": 39,
+                    "count": 40,
                     "user_reposted": 0
                 },
                 "text": "В Хабаровском крае детям мобилизованных раздали оружие и провели мастер-класс по военной подготовке.\n\nПатриоты движения «РОКОТ Z» научили малышей разбирать автоматы, а также провели им викторину и «сражение» — военную игру в лазертаг. \n\n«Слушаем внимательно, сейчас у вас будет захват контрольной точки! Контрольная точка находится в среднем здании», — отдаёт им приказ инструктор.",
                 "views": {
-                    "count": 9086
+                    "count": 9100
                 },
                 "hash": "afVHfeZSaI54pUl21g"
             },
@@ -5571,12 +5741,12 @@
                 },
                 "post_type": "post",
                 "reposts": {
-                    "count": 9,
+                    "count": 10,
                     "user_reposted": 0
                 },
                 "text": "Пропаганда еще совсем недавно рукоплескала генералу Суровикину и рассказывала, как он все исправит и наведет порядок.\n\nНа последнем фото — бонус: сегодня утром на сайте Дмитрия Киселева «Украина.Ру» опубликовали астрологическую аналитику по Суровикину. Но предсказать его скорую отставку с поста командующего «СВО» не смогли.",
                 "views": {
-                    "count": 8100
+                    "count": 8111
                 },
                 "hash": "pyBMQr3IcAPvlD_Seg"
             },
@@ -5588,7 +5758,7 @@
                 "marked_as_ads": 0,
                 "comments": {
                     "can_post": 1,
-                    "count": 256,
+                    "count": 258,
                     "groups_can_post": true
                 },
                 "attachments": [
@@ -5679,74 +5849,9 @@
                 },
                 "text": "Мужчин до 30 лет в РФ будут привлекать к срочной службе уже в весенний призыв 2023 года.\n\nОб этом «Парламентской газете» сообщил председатель комитета Госдумы РФ по обороне Андрей Картаполов.\n\n«До начала весеннего призыва каждый военный комиссариат должен будет разобраться, сколько людей у него попадают под новые требования, — пояснил Андрей Картаполов. — А после — привести эти данные в соответствие с военным заданием».\n\nНа первых порах призывать будут «по смешанному типу» — то есть, людей в возрасте от 18 до 30 лет. Полный же переход к ново системе, при которой минимальный призывной возраст будет составлять 21 год, а предельный — 30 лет, замет от одного года до трех лет, пишет издание. \n\nДо этого в РФ на срочную службу призывали мужчин от 18 до 27 лет (пункт 1 статьи 22 Федерального закона №53 «О воинской обязанности и военной службе»).",
                 "views": {
-                    "count": 19841
+                    "count": 19899
                 },
                 "hash": "42kKHFZ3gQLoKTpw7Q"
-            },
-            {
-                "id": 2789201,
-                "from_id": -63683472,
-                "owner_id": -63683472,
-                "date": 1673500500,
-                "marked_as_ads": 0,
-                "comments": {
-                    "can_post": 1,
-                    "count": 67,
-                    "groups_can_post": true
-                },
-                "attachments": [
-                    {
-                        "type": "video",
-                        "video": {
-                            "access_key": "29e946c7124b60e7c1",
-                            "can_comment": 0,
-                            "can_like": 1,
-                            "can_repost": 1,
-                            "can_subscribe": 1,
-                            "can_add_to_faves": 0,
-                            "can_add": 1,
-                            "comments": 0,
-                            "date": 1673497107,
-                            "description": "",
-                            "duration": 49,
-                            "photo_130": "https://i.mycdn.me/getVideoPreview?id=3465474542216&idx=11&type=39&tkn=Lx44R6VzvgFQocNU7VM6JcOir9Y&fn=vid_s",
-                            "photo_320": "https://i.mycdn.me/getVideoPreview?id=3465474542216&idx=11&type=39&tkn=Lx44R6VzvgFQocNU7VM6JcOir9Y&fn=vid_l",
-                            "photo_800": "https://i.mycdn.me/getVideoPreview?id=3465474542216&idx=11&type=39&tkn=Lx44R6VzvgFQocNU7VM6JcOir9Y&fn=vid_x",
-                            "photo_1280": "https://i.mycdn.me/getVideoPreview?id=3465474542216&idx=11&type=39&tkn=Lx44R6VzvgFQocNU7VM6JcOir9Y&fn=vid_w",
-                            "first_frame_130": "https://i.mycdn.me/getVideoPreview?id=3465474542216&idx=0&type=39&tkn=8ivjlOtHPy0ZqHflQ-YJS8he6Jo&fn=vid_sm",
-                            "first_frame_160": "https://i.mycdn.me/getVideoPreview?id=3465474542216&idx=0&type=39&tkn=8ivjlOtHPy0ZqHflQ-YJS8he6Jo&fn=vid_d",
-                            "first_frame_320": "https://i.mycdn.me/getVideoPreview?id=3465474542216&idx=0&type=39&tkn=8ivjlOtHPy0ZqHflQ-YJS8he6Jo&fn=vid_md",
-                            "first_frame_800": "https://i.mycdn.me/getVideoPreview?id=3465474542216&idx=0&type=39&tkn=8ivjlOtHPy0ZqHflQ-YJS8he6Jo&fn=vid_f",
-                            "first_frame_1280": "https://i.mycdn.me/getVideoPreview?id=3465474542216&idx=0&type=39&tkn=8ivjlOtHPy0ZqHflQ-YJS8he6Jo&fn=vid_w",
-                            "width": 1280,
-                            "height": 720,
-                            "id": 456255791,
-                            "owner_id": -63683472,
-                            "title": "Губернатор ХМАО проболталась о коррупционной схеме в прямом эфире.",
-                            "track_code": "video_96c30f8djN4eYvLRZJI932uUjkDMNjV2UQLrerpD-oK6mpXbuZC3_gdj87huljHRa_uLdfoEAENmO9p-zSKW7rqLuO2K",
-                            "views": 13740
-                        }
-                    }
-                ],
-                "likes": {
-                    "can_like": 1,
-                    "count": 236,
-                    "user_likes": 0,
-                    "can_publish": 1
-                },
-                "post_source": {
-                    "type": "api"
-                },
-                "post_type": "post",
-                "reposts": {
-                    "count": 98,
-                    "user_reposted": 0
-                },
-                "text": "«Там все в доле».\n\nГубернатор ХМАО проболталась о коррупционной схеме в прямом эфире. \n\nОнлайн-трансляцию сразу завершили и перед публикацией записи вырезали кусок.",
-                "views": {
-                    "count": 9877
-                },
-                "hash": "C3g4sr6qyxGb47YSyQ"
             }
         ]
     }
