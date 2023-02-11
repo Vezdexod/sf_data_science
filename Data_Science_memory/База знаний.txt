@@ -250,6 +250,8 @@ orders_daily.append("order1")
 orders_daily 
 # [“order1”] — в списке появился первый чек.
 
+list.remove(element)
+
 /Метод .clear()
 #Очистка списка
 a = ["order1", "order2", "order3", "order4"]
